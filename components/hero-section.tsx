@@ -212,14 +212,8 @@ export function HeroSection() {
         }}
       />
 
-      {/* Full-width rural SVG background */}
-      <svg
-        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', display: 'block' }}
-        viewBox="0 0 900 540"
-        preserveAspectRatio="xMidYMid slice"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
+      {/* ── Shared SVG defs (gradients used by both mobile + desktop) ── */}
+      <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">
         <defs>
           <linearGradient id="rh-sky" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%"   stopColor="#ffeaaa" />
@@ -234,19 +228,163 @@ export function HeroSection() {
             <stop offset="0%"   stopColor="#6db82e" />
             <stop offset="100%" stopColor="#3e7a12" />
           </linearGradient>
-          <radialGradient id="rh-sunglow" cx="65%" cy="18%" r="38%">
+          <radialGradient id="rh-sunglow-m" cx="50%" cy="15%" r="45%">
+            <stop offset="0%"   stopColor="#ffb020" stopOpacity="0.55" />
+            <stop offset="100%" stopColor="#ffb020" stopOpacity="0"   />
+          </radialGradient>
+          <radialGradient id="rh-sunglow-d" cx="65%" cy="18%" r="38%">
             <stop offset="0%"   stopColor="#ffb020" stopOpacity="0.55" />
             <stop offset="100%" stopColor="#ffb020" stopOpacity="0"   />
           </radialGradient>
         </defs>
+      </svg>
 
+      {/* ── MOBILE SVG background (hidden on md+) ── */}
+      <svg
+        className="md:hidden"
+        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none' }}
+        viewBox="0 0 540 900"
+        preserveAspectRatio="xMidYMid slice"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        {/* Sky */}
+        <rect width="540" height="900" fill="url(#rh-sky)" />
+        {/* Solid ground base */}
+        <rect x="0" y="560" width="540" height="340" fill="#3e7a12" />
+
+        {/* Sun glow + sun — centered top */}
+        <ellipse cx="270" cy="120" rx="200" ry="160" fill="url(#rh-sunglow-m)" />
+        <circle cx="270" cy="110" r="52" fill="#ffdd00" opacity="0.95" />
+        <circle cx="270" cy="110" r="72" fill="#ffdd00" opacity="0.12" />
+        <g stroke="#ffdd00" strokeWidth="2.5" opacity="0.4" strokeLinecap="round">
+          <line x1="270" y1="46"  x2="270" y2="28"  />
+          <line x1="322" y1="64"  x2="336" y2="50"  />
+          <line x1="342" y1="110" x2="362" y2="110" />
+          <line x1="322" y1="156" x2="336" y2="170" />
+          <line x1="270" y1="176" x2="270" y2="194" />
+          <line x1="218" y1="156" x2="204" y2="170" />
+          <line x1="198" y1="110" x2="178" y2="110" />
+          <line x1="218" y1="64"  x2="204" y2="50"  />
+        </g>
+
+        {/* Distant hills */}
+        <path
+          d="M0,460 Q80,420 160,440 Q240,400 320,425 Q400,395 460,415 Q500,400 540,410 L540,900 L0,900 Z"
+          fill="#7ab830" opacity="0.45"
+        />
+
+        {/* Sarson field */}
+        <path
+          d="M0,530 Q90,510 180,522 Q270,505 360,518 Q450,502 540,514 L540,900 L0,900 Z"
+          fill="url(#rh-sarson)"
+        />
+        <g stroke="#c89010" strokeWidth="0.8" opacity="0.25">
+          <line x1="0" y1="545" x2="540" y2="545" />
+          <line x1="0" y1="560" x2="540" y2="560" />
+          <line x1="0" y1="575" x2="540" y2="575" />
+        </g>
+        <g stroke="#e8a800" strokeWidth="1" opacity="0.4">
+          {[20,55,90,130,170,210,255,300,345,390,435,480,520].map((x) => (
+            <line key={x} x1={x} y1="534" x2={x - 2} y2="520" />
+          ))}
+        </g>
+
+        {/* Green ground */}
+        <path
+          d="M0,600 Q135,584 270,594 Q405,580 540,590 L540,900 L0,900 Z"
+          fill="url(#rh-ground)"
+        />
+
+        {/* Dirt path — center */}
+        <path d="M248,900 Q258,820 268,795 Q278,820 288,900 Z" fill="#c8901a" opacity="0.4" />
+
+        {/* Banyan tree — left side */}
+        <rect x="28" y="460" width="11" height="100" fill="#7a4a18" rx="3" />
+        <line x1="28" y1="555" x2="14" y2="568" stroke="#7a4a18" strokeWidth="3" strokeLinecap="round" />
+        <line x1="39" y1="555" x2="52" y2="568" stroke="#7a4a18" strokeWidth="3" strokeLinecap="round" />
+        <ellipse cx="33" cy="448" rx="42" ry="32" fill="#2e6e0e" opacity="0.9" />
+        <ellipse cx="33" cy="440" rx="32" ry="24" fill="#3a8a14" />
+        <ellipse cx="56" cy="454" rx="24" ry="19" fill="#2e6e0e" opacity="0.85" />
+        <ellipse cx="10" cy="454" rx="22" ry="18" fill="#3a8a14" opacity="0.9" />
+        <ellipse cx="33" cy="428" rx="22" ry="18" fill="#46a018" />
+
+        {/* Charpai under banyan */}
+        <rect x="10" y="570" width="46" height="18" fill="#c8901a" rx="2" opacity="0.85" />
+        <g stroke="#e8a860" strokeWidth="0.7" opacity="0.6">
+          <line x1="14" y1="574" x2="52" y2="574" />
+          <line x1="14" y1="579" x2="52" y2="579" />
+          <line x1="14" y1="584" x2="52" y2="584" />
+          <line x1="22" y1="570" x2="22" y2="588" />
+          <line x1="34" y1="570" x2="34" y2="588" />
+          <line x1="46" y1="570" x2="46" y2="588" />
+        </g>
+
+        {/* Kuan (well) — right side */}
+        <ellipse cx="480" cy="566" rx="20" ry="7" fill="#8b6a30" />
+        <rect x="460" y="542" width="40" height="24" fill="#a07840" rx="2" />
+        <ellipse cx="480" cy="542" rx="20" ry="7" fill="#b89050" />
+        <line x1="480" y1="542" x2="480" y2="524" stroke="#8b5a10" strokeWidth="1.5" />
+        <rect x="469" y="520" width="22" height="5" fill="#8b5a10" rx="1" />
+        <rect x="466" y="520" width="4" height="24" fill="#7a4a18" rx="1" />
+        <rect x="490" y="520" width="4" height="24" fill="#7a4a18" rx="1" />
+
+        {/* Mud hut — right, higher up */}
+        <rect x="370" y="480" width="76" height="52" fill="#c8781a" rx="2" />
+        <polygon points="360,480 456,480 436,450 378,450" fill="#a06010" />
+        <polygon points="360,480 456,480 436,454 378,454" fill="#b87218" opacity="0.5" />
+        <rect x="400" y="506" width="17" height="26" fill="#6b3a08" rx="2" />
+        <rect x="428" y="492" width="13" height="12" fill="#f0d080" rx="1" />
+        <path d="M424,450 Q427,438 422,428 Q426,418 422,408" fill="none" stroke="#ccc" strokeWidth="2" opacity="0.45" strokeLinecap="round" />
+
+        {/* Small tree near hut */}
+        <rect x="456" y="468" width="6" height="60" fill="#6b3a08" rx="2" />
+        <ellipse cx="459" cy="457" rx="19" ry="23" fill="#3a8010" opacity="0.88" />
+        <ellipse cx="459" cy="448" rx="14" ry="18" fill="#4a9c18" />
+
+        {/* Matka */}
+        <ellipse cx="362" cy="544" rx="8" ry="10" fill="#c8681a" />
+        <ellipse cx="362" cy="536" rx="6" ry="3" fill="#a85010" />
+
+        {/* Birds */}
+        <g stroke="#c87010" strokeWidth="1.8" fill="none" opacity="0.5">
+          <path d="M80,100 Q88,93 96,100" />
+          <path d="M110,82 Q118,75 126,82" />
+          <path d="M200,115 Q208,108 216,115" />
+          <path d="M380,90 Q388,83 396,90" />
+          <path d="M440,72 Q448,65 456,72" />
+        </g>
+
+        {/* Rangoli dots — bottom edge */}
+        <g fill="#e05e00" opacity="0.35">
+          {[30,66,102,138,174,210,248,286,324,362,400,438,476,512].map(
+            (x, i) => <circle key={x} cx={x} cy="893" r={i % 2 === 0 ? 4 : 3} />
+          )}
+        </g>
+
+        {/* Marigold garland arch */}
+        <path
+          d="M0,12 Q135,40 270,18 Q405,40 540,12"
+          fill="none" stroke="#e05e00" strokeWidth="2.5" opacity="0.2" strokeDasharray="7,6"
+        />
+      </svg>
+
+      {/* ── DESKTOP SVG background (hidden on mobile) ── */}
+      <svg
+        className="hidden md:block"
+        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none' }}
+        viewBox="0 0 900 540"
+        preserveAspectRatio="xMidYMid slice"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
         {/* Sky */}
         <rect width="900" height="540" fill="url(#rh-sky)" />
 
-        {/* Base ground — solid from y=380 to bottom, guarantees no white bleed at any section height */}
+        {/* Base ground — solid from y=380 to bottom */}
         <rect x="0" y="380" width="900" height="160" fill="#3e7a12" />
 
-        <ellipse cx="585" cy="98" rx="240" ry="160" fill="url(#rh-sunglow)" />
+        <ellipse cx="585" cy="98" rx="240" ry="160" fill="url(#rh-sunglow-d)" />
 
         {/* Sun */}
         <circle cx="585" cy="90" r="46" fill="#ffdd00" opacity="0.95" />
@@ -268,7 +406,7 @@ export function HeroSection() {
           fill="#7ab830" opacity="0.45"
         />
 
-        {/* Sarson (mustard) field — lowered to start at y=360 */}
+        {/* Sarson (mustard) field */}
         <path
           d="M0,360 Q120,340 240,352 Q360,336 480,348 Q600,332 720,345 Q810,330 900,340 L900,540 L0,540 Z"
           fill="url(#rh-sarson)"
@@ -285,7 +423,7 @@ export function HeroSection() {
           ))}
         </g>
 
-        {/* Green ground — raised to y=420, fills more of the bottom */}
+        {/* Green ground */}
         <path
           d="M0,424 Q200,408 450,418 Q660,406 900,416 L900,540 L0,540 Z"
           fill="url(#rh-ground)"
