@@ -1,0 +1,260 @@
+[
+  {
+    "id": 1,
+    "slug": "mazboot-storage-drum",
+    "name": "Mazboot Storage Drum",
+    "shortDescription": "Roz ke use ke liye best",
+    "image": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Product1-If77SpkCNg3UQYWsojydEEcMyvBGtE.png",
+    "category": "Storage",
+    "badge": "Best Seller",
+    "bestSeller": true,
+    "headline": "Paani aur anaaj store karne ke liye perfect",
+    "description": "Yeh drum paani aur anaaj store karne ke liye perfect hai. Iska material strong hai aur leak-proof design hai, jisse paani ya samaan safe rehta hai. Gaon mein roz ke use ke liye yeh bahut useful hai, chahe paani store karna ho ya anaaj bachake rakhna ho. Mazboot plastic se bana hai jo long time tak chalega.",
+    "price": {
+      "display": "₹299 se shuru",
+      "range": "₹299 – ₹599",
+      "note": "Size ke hisaab se daam alag ho sakta hai"
+    },
+    "inStock": true,
+    "deliveryDays": "3-5 din",
+    "cashOnDelivery": true,
+    "features": [
+      "Leak-proof design",
+      "Strong plastic material",
+      "Long lasting durability",
+      "Easy to clean",
+      "Weather resistant",
+      "No rust or corrosion"
+    ],
+    "specifications": [
+      { "label": "Material", "value": "Heavy-duty plastic" },
+      { "label": "Capacity", "value": "50-100 litre" },
+      { "label": "Usage", "value": "Water & grain storage" },
+      { "label": "Durability", "value": "Very High" },
+      { "label": "Weight", "value": "Light & portable" },
+      { "label": "Suitable for", "value": "Home & farm use" }
+    ],
+    "useCases": [
+      "Ghar mein paani store karne ke liye",
+      "Barsat ke paani ko rakhen",
+      "Anaaj aur dal bachake rakhne ke liye",
+      "Kheti mein paani supply ke liye"
+    ],
+    "whatsappMessage": "Namaste! Mujhe Mazboot Storage Drum ke baare mein jaankari chahiye. Kripya price aur delivery details batayein."
+  },
+  {
+    "id": 2,
+    "slug": "solar-led-light",
+    "name": "Solar LED Light",
+    "shortDescription": "Simple aur useful",
+    "image": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Product2-YYAPOerXeWo9ywU5H2zfhvqVSZmXrn.png",
+    "category": "Lighting",
+    "badge": "New",
+    "bestSeller": true,
+    "headline": "Bijli ke bina bhi bright roshni",
+    "description": "Yeh solar light bijli ke bina bhi kaam karti hai. Din mein charge hoti hai aur raat mein bright roshni deti hai. Gaon ke areas jahan light problem hoti hai, wahan yeh best solution hai. Battery backup 6-8 ghante tak deta hai aur bahut simple use hai.",
+    "price": {
+      "display": "₹499 se shuru",
+      "range": "₹499 – ₹899",
+      "note": "Model aur brightness ke hisaab se daam alag"
+    },
+    "inStock": true,
+    "deliveryDays": "3-5 din",
+    "cashOnDelivery": true,
+    "features": [
+      "Solar powered - free electricity",
+      "Bright LED light",
+      "Low maintenance required",
+      "Easy installation",
+      "Weather-resistant design",
+      "Long battery life"
+    ],
+    "specifications": [
+      { "label": "Power Source", "value": "Solar panel" },
+      { "label": "Battery Backup", "value": "6-8 hours" },
+      { "label": "Usage", "value": "Indoor & outdoor" },
+      { "label": "Charging", "value": "Direct sunlight" },
+      { "label": "Brightness", "value": "Very bright LED" },
+      { "label": "Installation", "value": "Easy - no wiring needed" }
+    ],
+    "useCases": [
+      "Ghar ke andar roshni ke liye",
+      "Kheti mein kaam karte samay",
+      "Bahar ke courtyard mein",
+      "Emergency lighting ke liye"
+    ],
+    "whatsappMessage": "Namaste! Mujhe Solar LED Light ke baare mein jaankari chahiye. Kripya price aur delivery details batayein."
+  },
+  {
+    "id": 3,
+    "slug": "hand-pump-motor-kit",
+    "name": "Hand Pump Motor Kit",
+    "shortDescription": "Kam daam mein achha",
+    "image": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Product3-GpK3vXsOzNwsLexAvWbgvf2RjcSWhu.png",
+    "category": "Water Supply",
+    "badge": null,
+    "bestSeller": true,
+    "headline": "Paani bharne ka kaam fast aur easy",
+    "description": "Yeh motor kit paani bharne ka kaam fast aur easy bana deti hai. Manual mehnat kam hoti hai aur paani jaldi mil jata hai. Kheti aur ghar dono ke liye useful hai. Strong build quality hai aur long time tak reliable rahega.",
+    "price": {
+      "display": "₹799 se shuru",
+      "range": "₹799 – ₹1,499",
+      "note": "Power aur flow rate ke hisaab se daam alag"
+    },
+    "inStock": true,
+    "deliveryDays": "5-7 din",
+    "cashOnDelivery": true,
+    "features": [
+      "Fast water flow",
+      "Easy installation",
+      "Energy efficient",
+      "Strong build quality",
+      "Low noise operation",
+      "Reliable performance"
+    ],
+    "specifications": [
+      { "label": "Type", "value": "Motor kit system" },
+      { "label": "Usage", "value": "Water pumping" },
+      { "label": "Power", "value": "Electric motor" },
+      { "label": "Flow Rate", "value": "High capacity" },
+      { "label": "Build Quality", "value": "Heavy-duty" },
+      { "label": "Suitable for", "value": "Farms & homes" }
+    ],
+    "useCases": [
+      "Tubewell se paani nikalna",
+      "Well mein paani bharna",
+      "Kheti mein paani dena",
+      "Ghar ke tank mein paani dena"
+    ],
+    "whatsappMessage": "Namaste! Mujhe Hand Pump Motor Kit ke baare mein jaankari chahiye. Kripya price aur delivery details batayein."
+  },
+  {
+    "id": 4,
+    "slug": "multi-use-plastic-crate",
+    "name": "Multi-Use Plastic Crate",
+    "shortDescription": "Use karna bilkul easy",
+    "image": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Product4-uKYeM15UYPYqgB3iNOOKSxA3fpFC4K.png",
+    "category": "Storage & Transport",
+    "badge": null,
+    "bestSeller": false,
+    "headline": "Sabji, doodh, samaan sab rakh sakte ho",
+    "description": "Yeh crate sabzi, doodh ya kisi bhi samaan ko rakhne ke liye perfect hai. Strong aur durable hai, easily carry ho jata hai aur long time tak chalta hai. Ghar mein bhi use kar sakte ho aur bazaar mein samaan le jaate samay bhi.",
+    "price": {
+      "display": "₹199 se shuru",
+      "range": "₹199 – ₹399",
+      "note": "Size ke hisaab se daam alag ho sakta hai"
+    },
+    "inStock": true,
+    "deliveryDays": "3-5 din",
+    "cashOnDelivery": true,
+    "features": [
+      "Lightweight but strong",
+      "Strong build quality",
+      "Easy to carry handles",
+      "Multi-purpose usage",
+      "Stackable design",
+      "Easy to clean"
+    ],
+    "specifications": [
+      { "label": "Material", "value": "Food-grade plastic" },
+      { "label": "Usage", "value": "Storage & transport" },
+      { "label": "Capacity", "value": "High load bearing" },
+      { "label": "Durability", "value": "Very durable" },
+      { "label": "Size", "value": "Medium & large" },
+      { "label": "Suitable for", "value": "Daily household use" }
+    ],
+    "useCases": [
+      "Sabzi aur phal rakhne ke liye",
+      "Doodh aur dairy products ke liye",
+      "Ghar se bazaar le jaane ke liye",
+      "Kheti mein phasal rakhne ke liye"
+    ],
+    "whatsappMessage": "Namaste! Mujhe Multi-Use Plastic Crate ke baare mein jaankari chahiye. Kripya price aur delivery details batayein."
+  },
+  {
+    "id": 5,
+    "slug": "heavy-duty-water-pipe",
+    "name": "Heavy Duty Water Pipe",
+    "shortDescription": "Bharosa ke saath",
+    "image": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Product5-ISzUmicCAUhHRQYbVXVvweh1ZNaGQM.png",
+    "category": "Irrigation",
+    "badge": null,
+    "bestSeller": false,
+    "headline": "Kheti ke liye leak-proof aur strong",
+    "description": "Yeh pipe kheti ke liye perfect hai. Leak-proof hai aur strong material se bana hai, jisse paani easily flow karta hai bina kisi problem ke. Barsat ho ya garmi, yeh har mausam mein reliable rehta hai.",
+    "price": {
+      "display": "₹149 se shuru",
+      "range": "₹149 – ₹499",
+      "note": "Length aur diameter ke hisaab se daam alag"
+    },
+    "inStock": true,
+    "deliveryDays": "3-5 din",
+    "cashOnDelivery": true,
+    "features": [
+      "Leak-proof design",
+      "Flexible material",
+      "Long lasting quality",
+      "Strong PVC material",
+      "Weather resistant",
+      "Easy to install"
+    ],
+    "specifications": [
+      { "label": "Material", "value": "Heavy-duty PVC" },
+      { "label": "Length", "value": "Custom available" },
+      { "label": "Usage", "value": "Irrigation & water supply" },
+      { "label": "Durability", "value": "Very high" },
+      { "label": "Flexibility", "value": "Highly flexible" },
+      { "label": "Suitable for", "value": "Agricultural use" }
+    ],
+    "useCases": [
+      "Kheti mein paani lagane ke liye",
+      "Pokhren se paani nikalne ke liye",
+      "Ghar mein underground piping",
+      "Animal trough tak paani le jaane ke liye"
+    ],
+    "whatsappMessage": "Namaste! Mujhe Heavy Duty Water Pipe ke baare mein jaankari chahiye. Kripya price aur delivery details batayein."
+  },
+  {
+    "id": 6,
+    "slug": "portable-chulha-stand",
+    "name": "Portable Chulha Stand",
+    "shortDescription": "Long time chalega",
+    "image": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Product6-83FSMYUmU7klzTkWTjY77E6vl5wdhP.png",
+    "category": "Cooking",
+    "badge": null,
+    "bestSeller": false,
+    "headline": "Ghar mein ya bahar - cooking ko easy banao",
+    "description": "Yeh chulha stand cooking ko safe aur easy bana deta hai. Ghar ke andar ya bahar dono jagah use kar sakte hain. Strong aur stable design hai jo long time tak chalega. Portable hai jisse aasan tarike se le-dhulakar kahin bhi laga sakte ho.",
+    "price": {
+      "display": "₹349 se shuru",
+      "range": "₹349 – ₹699",
+      "note": "Size aur material ke hisaab se daam alag"
+    },
+    "inStock": true,
+    "deliveryDays": "3-5 din",
+    "cashOnDelivery": true,
+    "features": [
+      "Stable structure",
+      "Heat resistant design",
+      "Easy to move around",
+      "Very durable",
+      "Lightweight construction",
+      "Safe for all fuel types"
+    ],
+    "specifications": [
+      { "label": "Material", "value": "Heavy-duty metal" },
+      { "label": "Usage", "value": "Cooking support stand" },
+      { "label": "Weight", "value": "Light & portable" },
+      { "label": "Heat Resistance", "value": "Very high" },
+      { "label": "Stability", "value": "Very stable" },
+      { "label": "Suitable for", "value": "Indoor & outdoor cooking" }
+    ],
+    "useCases": [
+      "Roz ke khana banane ke liye",
+      "Bahar mein chulha rakhne ke liye",
+      "Wedding ya event mein use",
+      "Gaon mein communal cooking ke liye"
+    ],
+    "whatsappMessage": "Namaste! Mujhe Portable Chulha Stand ke baare mein jaankari chahiye. Kripya price aur delivery details batayein."
+  }
+]
