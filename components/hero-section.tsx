@@ -14,9 +14,9 @@ const navItems = [
   { label: 'Contact',  href: '/#contact',  section: 'contact'  },
 ]
 
-/* ─── Hero Navbar (lives inside the hero) ───────────────────── */
+/* ─── Hero Navbar ───────────────────────────────────────────── */
 function HeroNavbar() {
-  const [isOpen, setIsOpen]   = useState(false)
+  const [isOpen, setIsOpen]     = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -43,11 +43,7 @@ function HeroNavbar() {
       className="absolute top-0 left-0 right-0 z-50 transition-all duration-300"
       style={
         scrolled
-          ? {
-              background: 'rgba(255,248,220,0.96)',
-              backdropFilter: 'blur(12px)',
-              borderBottom: '1px solid rgba(240,190,60,0.35)',
-            }
+          ? { background: 'rgba(255,248,220,0.96)', backdropFilter: 'blur(12px)', borderBottom: '1px solid rgba(240,190,60,0.35)' }
           : { background: 'transparent' }
       }
     >
@@ -56,26 +52,14 @@ function HeroNavbar() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5">
-            <div
-              className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
-              style={{ background: '#e05e00' }}
-            >
+            <div className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0" style={{ background: '#e05e00' }}>
               <span className="text-white font-bold text-base leading-none">स</span>
             </div>
             <div className="flex flex-col leading-none">
-              <span
-                className="font-bold text-lg tracking-tight"
-                style={{
-                  color: scrolled ? '#2d1a00' : '#ffffff',
-                  textShadow: scrolled ? 'none' : '0 1px 6px rgba(60,20,0,0.4)',
-                }}
-              >
+              <span className="font-bold text-lg tracking-tight" style={{ color: scrolled ? '#2d1a00' : '#ffffff', textShadow: scrolled ? 'none' : '0 1px 6px rgba(60,20,0,0.4)' }}>
                 Sushima
               </span>
-              <span
-                className="text-[10px] font-normal"
-                style={{ color: scrolled ? '#8a6030' : 'rgba(255,238,190,0.85)' }}
-              >
+              <span className="text-[10px] font-normal" style={{ color: scrolled ? '#8a6030' : 'rgba(255,238,190,0.85)' }}>
                 Gaon ke liye
               </span>
             </div>
@@ -84,15 +68,7 @@ function HeroNavbar() {
           {/* Desktop Nav */}
           <div
             className="hidden md:flex items-center gap-1 px-2 py-1 rounded-xl"
-            style={
-              scrolled
-                ? { background: 'transparent' }
-                : {
-                    background: 'rgba(0,0,0,0.22)',
-                    backdropFilter: 'blur(8px)',
-                    border: '1px solid rgba(255,255,255,0.12)',
-                  }
-            }
+            style={scrolled ? { background: 'transparent' } : { background: 'rgba(0,0,0,0.22)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.12)' }}
           >
             {navItems.map((item) => (
               <a
@@ -102,16 +78,12 @@ function HeroNavbar() {
                 className="px-4 py-2 text-sm font-medium rounded-md transition-colors duration-150"
                 style={{ color: scrolled ? '#5a3a10' : 'rgba(255,245,210,0.95)' }}
                 onMouseEnter={(e) => {
-                  ;(e.currentTarget as HTMLElement).style.background = scrolled
-                    ? 'rgba(240,190,60,0.18)'
-                    : 'rgba(255,255,255,0.15)'
+                  ;(e.currentTarget as HTMLElement).style.background = scrolled ? 'rgba(240,190,60,0.18)' : 'rgba(255,255,255,0.15)'
                   ;(e.currentTarget as HTMLElement).style.color = scrolled ? '#2d1a00' : '#ffffff'
                 }}
                 onMouseLeave={(e) => {
                   ;(e.currentTarget as HTMLElement).style.background = 'transparent'
-                  ;(e.currentTarget as HTMLElement).style.color = scrolled
-                    ? '#5a3a10'
-                    : 'rgba(255,245,210,0.95)'
+                  ;(e.currentTarget as HTMLElement).style.color = scrolled ? '#5a3a10' : 'rgba(255,245,210,0.95)'
                 }}
               >
                 {item.label}
@@ -147,11 +119,7 @@ function HeroNavbar() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2 }}
             className="md:hidden mt-3 pb-3 pt-3 space-y-1 rounded-xl px-2"
-            style={{
-              background: 'rgba(255,248,220,0.96)',
-              backdropFilter: 'blur(12px)',
-              border: '1px solid rgba(240,190,60,0.35)',
-            }}
+            style={{ background: 'rgba(255,248,220,0.96)', backdropFilter: 'blur(12px)', border: '1px solid rgba(240,190,60,0.35)' }}
           >
             {navItems.map((item) => (
               <a
@@ -197,17 +165,12 @@ export function HeroSection() {
         paddingBottom: '0',
       }}
     >
-      {/* Navbar sits inside the hero */}
       <HeroNavbar />
 
-      {/* Left-side warm overlay for text readability */}
+      {/* Left-side warm overlay */}
       <div
         className="absolute top-0 left-0 bottom-0 pointer-events-none z-[1]"
-        style={{
-          width: '52%',
-          background:
-            'linear-gradient(to right,rgba(120,60,0,0.38) 0%,rgba(120,60,0,0.22) 70%,rgba(120,60,0,0) 100%)',
-        }}
+        style={{ width: '52%', background: 'linear-gradient(to right,rgba(120,60,0,0.38) 0%,rgba(120,60,0,0.22) 70%,rgba(120,60,0,0) 100%)' }}
       />
 
       {/* ── Shared SVG defs ── */}
@@ -249,32 +212,21 @@ export function HeroSection() {
         <rect width="540" height="900" fill="url(#rh-sky)" />
         <rect x="0" y="560" width="540" height="340" fill="#3e7a12" />
 
-        {/* Sun glow — pulses */}
         <ellipse cx="270" cy="120" rx="200" ry="160" fill="url(#rh-sunglow-m)">
           <animate attributeName="rx" values="200;220;200" dur="4s" repeatCount="indefinite" />
           <animate attributeName="ry" values="160;178;160" dur="4s" repeatCount="indefinite" />
           <animate attributeName="opacity" values="1;0.7;1" dur="4s" repeatCount="indefinite" />
         </ellipse>
 
-        {/* Sun core */}
         <circle cx="270" cy="110" r="52" fill="#ffdd00" opacity="0.95" />
-        {/* Sun halo — breathes */}
         <circle cx="270" cy="110" r="72" fill="#ffdd00" opacity="0.12">
           <animate attributeName="r" values="72;84;72" dur="3s" repeatCount="indefinite" />
           <animate attributeName="opacity" values="0.12;0.22;0.12" dur="3s" repeatCount="indefinite" />
         </circle>
 
-        {/* Sun rays — rotate slowly */}
         <g stroke="#ffdd00" strokeWidth="2.5" opacity="0.55" strokeLinecap="round"
            style={{ transformOrigin: '270px 110px', transformBox: 'fill-box' }}>
-          <animateTransform
-            attributeName="transform"
-            type="rotate"
-            from="0 270 110"
-            to="360 270 110"
-            dur="30s"
-            repeatCount="indefinite"
-          />
+          <animateTransform attributeName="transform" type="rotate" from="0 270 110" to="360 270 110" dur="30s" repeatCount="indefinite" />
           <line x1="270" y1="46"  x2="270" y2="24"  />
           <line x1="322" y1="64"  x2="340" y2="46"  />
           <line x1="342" y1="110" x2="366" y2="110" />
@@ -283,7 +235,6 @@ export function HeroSection() {
           <line x1="218" y1="156" x2="200" y2="174" />
           <line x1="198" y1="110" x2="174" y2="110" />
           <line x1="218" y1="64"  x2="200" y2="46"  />
-          {/* extra diagonal rays for fullness */}
           <line x1="246" y1="48"  x2="238" y2="28"  />
           <line x1="294" y1="48"  x2="302" y2="28"  />
           <line x1="335" y1="79"  x2="352" y2="62"  />
@@ -309,44 +260,51 @@ export function HeroSection() {
         <path d="M0,600 Q135,584 270,594 Q405,580 540,590 L540,900 L0,900 Z" fill="url(#rh-ground)" />
         <path d="M248,900 Q258,820 268,795 Q278,820 288,900 Z" fill="#c8901a" opacity="0.4" />
 
-        {/* ── MOBILE: Animated Cart — moves right to left ── */}
-        {/* Cart enters from right edge, exits left — only cart moves */}
+        {/* Mobile: simple bicycle replacing cart */}
         <g>
           <animateTransform
             attributeName="transform"
             type="translate"
-            values="170 0; -900 0"
-            dur="12s"
+            values="200 0; -700 0"
+            dur="20s"
             repeatCount="indefinite"
             calcMode="linear"
           />
-          {/* Cart body */}
-          <rect x="370" y="480" width="76" height="52" fill="#c8781a" rx="2" />
-          <polygon points="360,480 456,480 436,450 378,450" fill="#a06010" />
-          <polygon points="360,480 456,480 436,454 378,454" fill="#b87218" opacity="0.5" />
-          <rect x="400" y="506" width="17" height="26" fill="#6b3a08" rx="2" />
-          <rect x="428" y="492" width="13" height="12" fill="#f0d080" rx="1" />
-          {/* Chimney smoke */}
-          <path d="M424,450 Q427,438 422,428 Q426,418 422,408" fill="none" stroke="#ccc" strokeWidth="2" opacity="0.45" strokeLinecap="round">
-            <animate attributeName="d" values="M424,450 Q427,438 422,428 Q426,418 422,408;M424,450 Q430,436 424,425 Q428,414 424,403;M424,450 Q427,438 422,428 Q426,418 422,408" dur="2s" repeatCount="indefinite" />
-          </path>
-          {/* Cart pole */}
-          <rect x="456" y="468" width="6" height="60" fill="#6b3a08" rx="2" />
-          {/* Tree on cart */}
-          <ellipse cx="459" cy="457" rx="19" ry="23" fill="#3a8010" opacity="0.88" />
-          <ellipse cx="459" cy="448" rx="14" ry="18" fill="#4a9c18" />
-          {/* Wheel — spins */}
+          {/* Rear wheel */}
           <g>
-            <animateTransform attributeName="transform" type="rotate" from="0 362 536" to="360 362 536" dur="1.2s" repeatCount="indefinite" />
-            <ellipse cx="362" cy="536" rx="8" ry="10" fill="none" stroke="#6b3a08" strokeWidth="2" />
-            <line x1="362" y1="526" x2="362" y2="546" stroke="#6b3a08" strokeWidth="1.5" />
-            <line x1="352" y1="536" x2="372" y2="536" stroke="#6b3a08" strokeWidth="1.5" />
+            <animateTransform attributeName="transform" type="rotate" from="0 390 558" to="360 390 558" dur="2.2s" repeatCount="indefinite" />
+            <circle cx="390" cy="558" r="14" fill="none" stroke="#5a3a10" strokeWidth="2" />
+            <line x1="390" y1="544" x2="390" y2="572" stroke="#5a3a10" strokeWidth="1.2" />
+            <line x1="376" y1="558" x2="404" y2="558" stroke="#5a3a10" strokeWidth="1.2" />
           </g>
-          <ellipse cx="362" cy="544" rx="8" ry="10" fill="#c8681a" />
-          <ellipse cx="362" cy="536" rx="6" ry="3" fill="#a85010" />
+          <circle cx="390" cy="558" r="14" fill="none" stroke="#4a2808" strokeWidth="2.2" />
+          <circle cx="390" cy="558" r="2.5" fill="#4a2808" />
+          {/* Front wheel */}
+          <g>
+            <animateTransform attributeName="transform" type="rotate" from="0 424 558" to="360 424 558" dur="2.2s" repeatCount="indefinite" />
+            <circle cx="424" cy="558" r="14" fill="none" stroke="#5a3a10" strokeWidth="2" />
+            <line x1="424" y1="544" x2="424" y2="572" stroke="#5a3a10" strokeWidth="1.2" />
+            <line x1="410" y1="558" x2="438" y2="558" stroke="#5a3a10" strokeWidth="1.2" />
+          </g>
+          <circle cx="424" cy="558" r="14" fill="none" stroke="#4a2808" strokeWidth="2.2" />
+          <circle cx="424" cy="558" r="2.5" fill="#4a2808" />
+          {/* Frame */}
+          <line x1="390" y1="558" x2="406" y2="546" stroke="#6b4010" strokeWidth="2" strokeLinecap="round" />
+          <line x1="390" y1="558" x2="403" y2="534" stroke="#6b4010" strokeWidth="1.8" strokeLinecap="round" />
+          <line x1="403" y1="534" x2="418" y2="536" stroke="#6b4010" strokeWidth="1.8" strokeLinecap="round" />
+          <line x1="418" y1="536" x2="406" y2="546" stroke="#7a5018" strokeWidth="1.8" strokeLinecap="round" />
+          <line x1="418" y1="536" x2="424" y2="558" stroke="#6b4010" strokeWidth="1.8" strokeLinecap="round" />
+          {/* Saddle */}
+          <line x1="403" y1="534" x2="401" y2="526" stroke="#5a3808" strokeWidth="1.8" strokeLinecap="round" />
+          <rect x="396" y="523" width="12" height="3" rx="1.5" fill="#3a2008" />
+          {/* Handlebars */}
+          <line x1="418" y1="536" x2="420" y2="528" stroke="#5a3808" strokeWidth="1.8" strokeLinecap="round" />
+          <line x1="416" y1="527" x2="424" y2="527" stroke="#3a2008" strokeWidth="2" strokeLinecap="round" />
+          {/* Bottom bracket */}
+          <circle cx="406" cy="546" r="3" fill="#5a3808" />
         </g>
 
-        {/* Static tree — rendered AFTER cart so it stays in front */}
+        {/* Static tree */}
         <rect x="28" y="460" width="11" height="100" fill="#7a4a18" rx="3" />
         <line x1="28" y1="555" x2="14" y2="568" stroke="#7a4a18" strokeWidth="3" strokeLinecap="round" />
         <line x1="39" y1="555" x2="52" y2="568" stroke="#7a4a18" strokeWidth="3" strokeLinecap="round" />
@@ -356,7 +314,23 @@ export function HeroSection() {
         <ellipse cx="10" cy="454" rx="22" ry="18" fill="#3a8a14" opacity="0.9" />
         <ellipse cx="33" cy="428" rx="22" ry="18" fill="#46a018" />
 
-        {/* Static hay bales — rendered AFTER cart */}
+        {/* Mobile: village house */}
+        <rect x="260" y="504" width="56" height="40" fill="#c4975a" rx="2" />
+        <line x1="260" y1="513" x2="316" y2="513" stroke="#a07840" strokeWidth="0.6" opacity="0.5" />
+        <line x1="260" y1="522" x2="316" y2="522" stroke="#a07840" strokeWidth="0.6" opacity="0.5" />
+        <line x1="260" y1="531" x2="316" y2="531" stroke="#a07840" strokeWidth="0.6" opacity="0.5" />
+        <polygon points="253,505 323,503 330,493 246,495" fill="#8b6a2a" />
+        <polygon points="253,505 323,503 323,497 253,499" fill="#a07832" opacity="0.5" />
+        <rect x="328" y="485" width="6" height="10" fill="#9a7848" rx="1" />
+        {/* Smoke */}
+        <path d="M331,485 Q333,476 329,468" fill="none" stroke="#c8c0a0" strokeWidth="1.5" opacity="0.32" strokeLinecap="round">
+          <animate attributeName="d" values="M331,485 Q333,476 329,468;M331,485 Q335,474 330,466;M331,485 Q333,476 329,468" dur="3.5s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.32;0.12;0.32" dur="3.5s" repeatCount="indefinite" />
+        </path>
+        <rect x="278" y="522" width="14" height="22" fill="#6b4210" rx="1" />
+        <rect x="264" y="512" width="11" height="9" fill="#f0d080" rx="1" opacity="0.85" />
+
+        {/* Hay bales */}
         <rect x="10" y="570" width="46" height="18" fill="#c8901a" rx="2" opacity="0.85" />
         <g stroke="#e8a860" strokeWidth="0.7" opacity="0.6">
           <line x1="14" y1="574" x2="52" y2="574" />
@@ -367,7 +341,7 @@ export function HeroSection() {
           <line x1="46" y1="570" x2="46" y2="588" />
         </g>
 
-        {/* Pot — rendered AFTER cart */}
+        {/* Pot */}
         <ellipse cx="480" cy="566" rx="20" ry="7" fill="#8b6a30" />
         <rect x="460" y="542" width="40" height="24" fill="#a07840" rx="2" />
         <ellipse cx="480" cy="542" rx="20" ry="7" fill="#b89050" />
@@ -376,33 +350,13 @@ export function HeroSection() {
         <rect x="466" y="520" width="4" height="24" fill="#7a4a18" rx="1" />
         <rect x="490" y="520" width="4" height="24" fill="#7a4a18" rx="1" />
 
-        {/* Birds — each bird bobs independently */}
+        {/* Birds */}
         <g stroke="#c87010" strokeWidth="1.8" fill="none" opacity="0.5">
-          {/* Bird 1 */}
-          <g>
-            <animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 0" dur="3.2s" begin="0s" repeatCount="indefinite" />
-            <path d="M80,100 Q88,93 96,100" />
-          </g>
-          {/* Bird 2 */}
-          <g>
-            <animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="4.5s" begin="0.8s" repeatCount="indefinite" />
-            <path d="M110,82 Q118,75 126,82" />
-          </g>
-          {/* Bird 3 */}
-          <g>
-            <animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="3.8s" begin="1.4s" repeatCount="indefinite" />
-            <path d="M200,115 Q208,108 216,115" />
-          </g>
-          {/* Bird 4 */}
-          <g>
-            <animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="5.1s" begin="0.3s" repeatCount="indefinite" />
-            <path d="M380,90 Q388,83 396,90" />
-          </g>
-          {/* Bird 5 */}
-          <g>
-            <animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="2.9s" begin="1.9s" repeatCount="indefinite" />
-            <path d="M440,72 Q448,65 456,72" />
-          </g>
+          <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 0" dur="3.2s" begin="0s" repeatCount="indefinite" /><path d="M80,100 Q88,93 96,100" /></g>
+          <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="4.5s" begin="0.8s" repeatCount="indefinite" /><path d="M110,82 Q118,75 126,82" /></g>
+          <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="3.8s" begin="1.4s" repeatCount="indefinite" /><path d="M200,115 Q208,108 216,115" /></g>
+          <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="5.1s" begin="0.3s" repeatCount="indefinite" /><path d="M380,90 Q388,83 396,90" /></g>
+          <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="2.9s" begin="1.9s" repeatCount="indefinite" /><path d="M440,72 Q448,65 456,72" /></g>
         </g>
 
         <g fill="#e05e00" opacity="0.35">
@@ -425,7 +379,7 @@ export function HeroSection() {
         <rect width="900" height="540" fill="url(#rh-sky)" />
         <rect x="0" y="380" width="900" height="160" fill="#3e7a12" />
 
-        {/* Sun glow — pulses */}
+        {/* Sun glow */}
         <ellipse cx="585" cy="98" rx="240" ry="160" fill="url(#rh-sunglow-d)">
           <animate attributeName="rx" values="240;270;240" dur="4s" repeatCount="indefinite" />
           <animate attributeName="ry" values="160;182;160" dur="4s" repeatCount="indefinite" />
@@ -435,23 +389,15 @@ export function HeroSection() {
         {/* Sun core */}
         <circle cx="585" cy="90" r="46" fill="#ffdd00" opacity="0.95" />
 
-        {/* Sun halo — breathes */}
+        {/* Sun halo */}
         <circle cx="585" cy="90" r="64" fill="#ffdd00" opacity="0.13">
           <animate attributeName="r" values="64;78;64" dur="3s" repeatCount="indefinite" />
           <animate attributeName="opacity" values="0.13;0.24;0.13" dur="3s" repeatCount="indefinite" />
         </circle>
 
-        {/* Sun rays — rotate slowly */}
+        {/* Sun rays */}
         <g stroke="#ffdd00" strokeWidth="2.2" opacity="0.55" strokeLinecap="round">
-          <animateTransform
-            attributeName="transform"
-            type="rotate"
-            from="0 585 90"
-            to="360 585 90"
-            dur="30s"
-            repeatCount="indefinite"
-          />
-          {/* 8 main rays */}
+          <animateTransform attributeName="transform" type="rotate" from="0 585 90" to="360 585 90" dur="30s" repeatCount="indefinite" />
           <line x1="585" y1="30"  x2="585" y2="10"  />
           <line x1="637" y1="46"  x2="653" y2="30"  />
           <line x1="655" y1="90"  x2="677" y2="90"  />
@@ -460,7 +406,6 @@ export function HeroSection() {
           <line x1="533" y1="134" x2="517" y2="150" />
           <line x1="515" y1="90"  x2="493" y2="90"  />
           <line x1="533" y1="46"  x2="517" y2="30"  />
-          {/* 8 diagonal rays (shorter, fill gaps) */}
           <line x1="559" y1="33"  x2="551" y2="14"  />
           <line x1="611" y1="33"  x2="619" y2="14"  />
           <line x1="648" y1="68"  x2="666" y2="52"  />
@@ -471,6 +416,7 @@ export function HeroSection() {
           <line x1="522" y1="68"  x2="504" y2="52"  />
         </g>
 
+        {/* Field layers */}
         <path d="M0,310 Q100,268 200,288 Q310,248 420,272 Q510,238 620,260 Q710,235 800,252 Q860,240 900,248 L900,540 L0,540 Z" fill="#7ab830" opacity="0.45" />
         <path d="M0,360 Q120,340 240,352 Q360,336 480,348 Q600,332 720,345 Q810,330 900,340 L900,540 L0,540 Z" fill="url(#rh-sarson)" />
         <g stroke="#c89010" strokeWidth="0.8" opacity="0.28">
@@ -487,65 +433,42 @@ export function HeroSection() {
         <path d="M0,424 Q200,408 450,418 Q660,406 900,416 L900,540 L0,540 Z" fill="url(#rh-ground)" />
         <path d="M410,540 Q422,478 432,458 Q442,478 454,540 Z" fill="#c8901a" opacity="0.4" />
 
-        {/* ── DESKTOP: Animated Cart — moves right to left ── */}
-        {/* Cart enters from right edge (x=900+) and exits left edge */}
-        <g>
-          <animateTransform
-            attributeName="transform"
-            type="translate"
-            values="330 0; -900 0"
-            dur="16s"
-            repeatCount="indefinite"
-            calcMode="linear"
-          />
-          {/* Cart body */}
-          <rect    x="570"  y="352" width="84" height="56" fill="#c8781a" rx="2" />
-          <polygon points="558,352 666,352 644,318 580,318" fill="#a06010" />
-          <polygon points="558,352 666,352 644,323 580,323" fill="#b87218" opacity="0.5" />
-          <rect x="602" y="380" width="19" height="28" fill="#6b3a08" rx="2" />
-          <rect x="632" y="366" width="15" height="13" fill="#f0d080" rx="1" />
-          {/* Animated chimney smoke */}
-          <path d="M638,318 Q641,305 635,294 Q640,283 636,272" fill="none" stroke="#ccc" strokeWidth="2" opacity="0.5" strokeLinecap="round">
-            <animate attributeName="d" values="M638,318 Q641,305 635,294 Q640,283 636,272;M638,318 Q644,303 638,291 Q643,279 639,268;M638,318 Q641,305 635,294 Q640,283 636,272" dur="2s" repeatCount="indefinite" />
-          </path>
-          {/* Pole and tree */}
-          <rect    x="668" y="342" width="7"  height="66" fill="#6b3a08" rx="2" />
-          <ellipse cx="671" cy="330" rx="22" ry="26" fill="#3a8010" opacity="0.88" />
-          <ellipse cx="671" cy="320" rx="16" ry="20" fill="#4a9c18" />
-          <circle  cx="666" cy="325" r="3"            fill="#f5a800" opacity="0.75" />
-          <circle  cx="676" cy="332" r="2.5"          fill="#e8900a" opacity="0.7"  />
-          {/* Cart frame at translate(730,364) */}
-          <g transform="translate(730,364)">
-            <rect x="0" y="18" width="62" height="22" fill="#8b4a10" rx="2" />
-            <line x1="-32" y1="30" x2="0" y2="30" stroke="#6b3a08" strokeWidth="3" />
-            {/* Back wheel spins */}
-            <g>
-              <animateTransform attributeName="transform" type="rotate" from="0 10 40" to="360 10 40" dur="1.5s" repeatCount="indefinite" />
-              <circle cx="10" cy="40" r="13" fill="none" stroke="#5a2a08" strokeWidth="2" />
-              <line x1="10" y1="27" x2="10" y2="53" stroke="#5a2a08" strokeWidth="1.5" />
-              <line x1="-3" y1="40" x2="23" y2="40" stroke="#5a2a08" strokeWidth="1.5" />
-            </g>
-            <circle cx="10" cy="40" r="13" fill="none" stroke="#5a2a08" strokeWidth="3" />
-            <circle cx="10" cy="40" r="4"  fill="#5a2a08" />
-            {/* Front wheel spins */}
-            <g>
-              <animateTransform attributeName="transform" type="rotate" from="0 52 40" to="360 52 40" dur="1.5s" repeatCount="indefinite" />
-              <circle cx="52" cy="40" r="13" fill="none" stroke="#5a2a08" strokeWidth="2" />
-              <line x1="52" y1="27" x2="52" y2="53" stroke="#5a2a08" strokeWidth="1.5" />
-              <line x1="39" y1="40" x2="65" y2="40" stroke="#5a2a08" strokeWidth="1.5" />
-            </g>
-            <circle cx="52" cy="40" r="13" fill="none" stroke="#5a2a08" strokeWidth="3" />
-            <circle cx="52" cy="40" r="4"  fill="#5a2a08" />
-            <ellipse cx="-18" cy="26" rx="17" ry="9" fill="#c8901a" />
-            <circle  cx="-6"  cy="22" r="7"           fill="#c8901a" />
-            <path d="M-4,16 Q0,9 2,13"     fill="none" stroke="#8b5a10" strokeWidth="1.5" />
-            <path d="M-8,16 Q-12,9 -14,13" fill="none" stroke="#8b5a10" strokeWidth="1.5" />
-          </g>
-          <ellipse cx="564" cy="404" rx="9" ry="11" fill="#c8681a" />
-          <ellipse cx="564" cy="395" rx="7" ry="3"  fill="#a85010" />
-        </g>
+        {/* ─── VILLAGE HOUSE — moved left by 200px so it's visible ─── */}
+        {/* House body — mud brick */}
+        <rect x="290" y="372" width="72" height="50" fill="#c4975a" rx="2" />
+        {/* Mud texture lines */}
+        <line x1="290" y1="382" x2="362" y2="382" stroke="#a07840" strokeWidth="0.6" opacity="0.5" />
+        <line x1="290" y1="392" x2="362" y2="392" stroke="#a07840" strokeWidth="0.6" opacity="0.5" />
+        <line x1="290" y1="402" x2="362" y2="402" stroke="#a07840" strokeWidth="0.6" opacity="0.5" />
+        <line x1="290" y1="412" x2="362" y2="412" stroke="#a07840" strokeWidth="0.6" opacity="0.5" />
+        {/* Slanted thatched roof */}
+        <polygon points="282,374 370,372 378,360 274,362" fill="#8b6a2a" />
+        <polygon points="282,374 370,372 370,366 282,368" fill="#a07832" opacity="0.5" />
+        {/* Roof ridge */}
+        <line x1="274" y1="362" x2="378" y2="360" stroke="#6b4e18" strokeWidth="1" opacity="0.7" />
+        {/* Chimney */}
+        <rect x="348" y="350" width="8" height="14" fill="#9a7848" rx="1" />
+        {/* Chulha smoke — soft animated wisps */}
+        <path d="M352,350 Q355,338 350,327 Q353,316 350,305" fill="none" stroke="#c8c0a0" strokeWidth="2" strokeLinecap="round" opacity="0.35">
+          <animate attributeName="d" values="M352,350 Q355,338 350,327 Q353,316 350,305;M352,350 Q358,336 352,324 Q356,312 352,301;M352,350 Q355,338 350,327 Q353,316 350,305" dur="3.5s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.35;0.14;0.35" dur="3.5s" repeatCount="indefinite" />
+        </path>
+        <path d="M352,350 Q349,334 353,320" fill="none" stroke="#d0c8a8" strokeWidth="1.2" strokeLinecap="round" opacity="0.2">
+          <animate attributeName="d" values="M352,350 Q349,334 353,320;M352,350 Q354,333 350,318;M352,350 Q349,334 353,320" dur="4.5s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.2;0.07;0.2" dur="4.5s" repeatCount="indefinite" />
+        </path>
+        {/* Door */}
+        <rect x="316" y="390" width="18" height="32" fill="#6b4210" rx="1" />
+        <line x1="325" y1="390" x2="325" y2="422" stroke="#4a2e08" strokeWidth="0.8" opacity="0.6" />
+        <circle cx="331" cy="408" r="1.5" fill="#c8901a" opacity="0.8" />
+        {/* Window */}
+        <rect x="296" y="382" width="14" height="12" fill="#f0d080" rx="1" opacity="0.85" />
+        <line x1="303" y1="382" x2="303" y2="394" stroke="#8b6020" strokeWidth="0.8" opacity="0.6" />
+        <line x1="296" y1="388" x2="310" y2="388" stroke="#8b6020" strokeWidth="0.8" opacity="0.6" />
+        {/* Courtyard shadow */}
+        <ellipse cx="326" cy="423" rx="42" ry="5" fill="#c4975a" opacity="0.25" />
 
-        {/* Tree (static) — rendered AFTER cart so it stays in front */}
+        {/* ─── Tree (static) ─── */}
         <rect x="55" y="295" width="12" height="110" fill="#7a4a18" rx="4" />
         <line x1="55" y1="400" x2="38" y2="415" stroke="#7a4a18" strokeWidth="4" strokeLinecap="round" />
         <line x1="67" y1="400" x2="82" y2="415" stroke="#7a4a18" strokeWidth="4" strokeLinecap="round" />
@@ -557,9 +480,8 @@ export function HeroSection() {
         <ellipse cx="61" cy="258" rx="28" ry="22" fill="#46a018"                />
         <line x1="50" y1="308" x2="46" y2="340" stroke="#7a4a18" strokeWidth="1.5" opacity="0.5" />
         <line x1="70" y1="310" x2="74" y2="342" stroke="#7a4a18" strokeWidth="1.5" opacity="0.5" />
-        <line x1="60" y1="315" x2="58" y2="348" stroke="#7a4a18" strokeWidth="1"   opacity="0.4" />
 
-        {/* Hay bale (static) — rendered AFTER cart */}
+        {/* ─── Hay bale (static) ─── */}
         <rect x="26" y="408" width="50" height="22" fill="#c8901a" rx="2" opacity="0.85" />
         <line x1="26" y1="408" x2="26" y2="430" stroke="#8b5a10" strokeWidth="2" />
         <line x1="76" y1="408" x2="76" y2="430" stroke="#8b5a10" strokeWidth="2" />
@@ -570,7 +492,7 @@ export function HeroSection() {
           <line x1="62" y1="408" x2="62" y2="430" />
         </g>
 
-        {/* Pot (static) — rendered AFTER cart */}
+        {/* ─── Water pot (static) ─── */}
         <ellipse cx="200" cy="416" rx="22" ry="8"  fill="#8b6a30" />
         <rect    x="178"  y="390" width="44" height="26" fill="#a07840" rx="2" />
         <ellipse cx="200" cy="390" rx="22" ry="8"  fill="#b89050" />
@@ -579,45 +501,70 @@ export function HeroSection() {
         <rect x="185" y="366" width="4"  height="28" fill="#7a4a18" rx="1" />
         <rect x="211" y="366" width="4"  height="28" fill="#7a4a18" rx="1" />
 
-        {/* Birds — each bird bobs independently */}
-        <g stroke="#c87010" strokeWidth="1.8" fill="none" opacity="0.5">
-          {/* Bird 1 */}
+        {/* ─── BICYCLE — moves slowly right to left ─── */}
+        <g>
+          <animateTransform
+            attributeName="transform"
+            type="translate"
+            values="350 0; -900 0"
+            dur="22s"
+            repeatCount="indefinite"
+            calcMode="linear"
+          />
+          {/* Rear wheel */}
           <g>
-            <animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="3.3s" begin="0s" repeatCount="indefinite" />
-            <path d="M150,68 Q158,61 166,68" />
+            <animateTransform attributeName="transform" type="rotate" from="0 340 432" to="360 340 432" dur="2.2s" repeatCount="indefinite" />
+            <circle cx="340" cy="432" r="18" fill="none" stroke="#5a3a10" strokeWidth="2.2" />
+            <line x1="340" y1="414" x2="340" y2="450" stroke="#5a3a10" strokeWidth="1.2" />
+            <line x1="322" y1="432" x2="358" y2="432" stroke="#5a3a10" strokeWidth="1.2" />
+            <line x1="327" y1="419" x2="353" y2="445" stroke="#5a3a10" strokeWidth="1" opacity="0.6" />
+            <line x1="327" y1="445" x2="353" y2="419" stroke="#5a3a10" strokeWidth="1" opacity="0.6" />
           </g>
-          {/* Bird 2 */}
+          <circle cx="340" cy="432" r="18" fill="none" stroke="#4a2808" strokeWidth="2.5" />
+          <circle cx="340" cy="432" r="3.5" fill="#4a2808" />
+          {/* Front wheel */}
           <g>
-            <animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="5.0s" begin="1.1s" repeatCount="indefinite" />
-            <path d="M178,55 Q186,48 194,55" />
+            <animateTransform attributeName="transform" type="rotate" from="0 388 432" to="360 388 432" dur="2.2s" repeatCount="indefinite" />
+            <circle cx="388" cy="432" r="18" fill="none" stroke="#5a3a10" strokeWidth="2.2" />
+            <line x1="388" y1="414" x2="388" y2="450" stroke="#5a3a10" strokeWidth="1.2" />
+            <line x1="370" y1="432" x2="406" y2="432" stroke="#5a3a10" strokeWidth="1.2" />
+            <line x1="375" y1="419" x2="401" y2="445" stroke="#5a3a10" strokeWidth="1" opacity="0.6" />
+            <line x1="375" y1="445" x2="401" y2="419" stroke="#5a3a10" strokeWidth="1" opacity="0.6" />
           </g>
-          {/* Bird 3 */}
-          <g>
-            <animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="3.7s" begin="0.5s" repeatCount="indefinite" />
-            <path d="M320,80 Q328,73 336,80" />
-          </g>
-          {/* Bird 4 */}
-          <g>
-            <animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="4.4s" begin="2.0s" repeatCount="indefinite" />
-            <path d="M350,62 Q358,55 366,62" />
-          </g>
-          {/* Bird 5 */}
-          <g>
-            <animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 0" dur="2.8s" begin="0.7s" repeatCount="indefinite" />
-            <path d="M680,72 Q688,65 696,72" />
-          </g>
-          {/* Bird 6 */}
-          <g>
-            <animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="4.1s" begin="1.6s" repeatCount="indefinite" />
-            <path d="M710,54 Q718,47 726,54" />
-          </g>
-          {/* Bird 7 */}
-          <g>
-            <animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="3.5s" begin="2.3s" repeatCount="indefinite" />
-            <path d="M760,80 Q768,73 776,80" />
-          </g>
+          <circle cx="388" cy="432" r="18" fill="none" stroke="#4a2808" strokeWidth="2.5" />
+          <circle cx="388" cy="432" r="3.5" fill="#4a2808" />
+          {/* Frame: chain stay rear axle → bottom bracket */}
+          <line x1="340" y1="432" x2="362" y2="418" stroke="#6b4010" strokeWidth="2.2" strokeLinecap="round" />
+          {/* Frame: seat stay rear axle → seat tube */}
+          <line x1="340" y1="432" x2="358" y2="404" stroke="#6b4010" strokeWidth="2" strokeLinecap="round" />
+          {/* Frame: top tube seat → head */}
+          <line x1="358" y1="404" x2="378" y2="407" stroke="#6b4010" strokeWidth="2.2" strokeLinecap="round" />
+          {/* Frame: down tube head → bottom bracket */}
+          <line x1="378" y1="407" x2="362" y2="418" stroke="#7a5018" strokeWidth="2" strokeLinecap="round" />
+          {/* Frame: front fork head → front axle */}
+          <line x1="378" y1="407" x2="388" y2="432" stroke="#6b4010" strokeWidth="2.2" strokeLinecap="round" />
+          {/* Seat post + saddle */}
+          <line x1="358" y1="404" x2="355" y2="393" stroke="#5a3808" strokeWidth="2" strokeLinecap="round" />
+          <rect x="348" y="390" width="16" height="4" rx="2" fill="#3a2008" />
+          {/* Handlebar stem + bar */}
+          <line x1="378" y1="407" x2="381" y2="396" stroke="#5a3808" strokeWidth="2" strokeLinecap="round" />
+          <line x1="376" y1="395" x2="386" y2="395" stroke="#3a2008" strokeWidth="2.5" strokeLinecap="round" />
+          {/* Bottom bracket dot */}
+          <circle cx="362" cy="418" r="4" fill="#5a3808" />
         </g>
 
+        {/* ─── Birds ─── */}
+        <g stroke="#c87010" strokeWidth="1.8" fill="none" opacity="0.5">
+          <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="3.3s" begin="0s" repeatCount="indefinite" /><path d="M150,68 Q158,61 166,68" /></g>
+          <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="5.0s" begin="1.1s" repeatCount="indefinite" /><path d="M178,55 Q186,48 194,55" /></g>
+          <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -7;0 0" dur="3.7s" begin="0.5s" repeatCount="indefinite" /><path d="M320,80 Q328,73 336,80" /></g>
+          <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -3;0 0" dur="4.4s" begin="2.0s" repeatCount="indefinite" /><path d="M350,62 Q358,55 366,62" /></g>
+          <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 0" dur="2.8s" begin="0.7s" repeatCount="indefinite" /><path d="M680,72 Q688,65 696,72" /></g>
+          <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -8;0 0" dur="4.1s" begin="1.6s" repeatCount="indefinite" /><path d="M710,54 Q718,47 726,54" /></g>
+          <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="3.5s" begin="2.3s" repeatCount="indefinite" /><path d="M760,80 Q768,73 776,80" /></g>
+        </g>
+
+        {/* Decorative dots */}
         <g fill="#e05e00" opacity="0.35">
           {[50,92,134,176,218,260,302,344,386,428,470,512,554,596,638,680,722,764,806,848].map(
             (x, i) => <circle key={x} cx={x} cy="533" r={i % 2 === 0 ? 4 : 3} />
@@ -691,11 +638,7 @@ export function HeroSection() {
                 >
                   <span
                     className="w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold shrink-0 text-white"
-                    style={{
-                      background: 'rgba(74,140,24,0.9)',
-                      border: '1.5px solid #6ab830',
-                      boxShadow: '0 1px 4px rgba(0,0,0,0.25)',
-                    }}
+                    style={{ background: 'rgba(74,140,24,0.9)', border: '1.5px solid #6ab830', boxShadow: '0 1px 4px rgba(0,0,0,0.25)' }}
                   >
                     ✓
                   </span>
@@ -721,12 +664,7 @@ export function HeroSection() {
               <button
                 onClick={() => scrollTo('contact')}
                 className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-7 py-3 rounded-lg font-semibold text-sm transition-colors duration-150 hover:bg-white/10"
-                style={{
-                  background: 'rgba(255,255,255,0.12)',
-                  border: '2px solid #6ab830',
-                  color: '#d4f09a',
-                  backdropFilter: 'blur(4px)',
-                }}
+                style={{ background: 'rgba(255,255,255,0.12)', border: '2px solid #6ab830', color: '#d4f09a', backdropFilter: 'blur(4px)' }}
               >
                 <Phone size={14} />
                 Order Karein
@@ -764,9 +702,7 @@ export function HeroSection() {
                 fill
                 className="object-cover"
                 priority
-                onError={(e) => {
-                  ;(e.target as HTMLImageElement).style.display = 'none'
-                }}
+                onError={(e) => { ;(e.target as HTMLImageElement).style.display = 'none' }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -785,11 +721,7 @@ export function HeroSection() {
                 <div
                   key={stat.label}
                   className="rounded-xl px-3 py-3 text-center"
-                  style={{
-                    background: 'rgba(255,248,220,0.88)',
-                    border: '1.5px solid #f0c060',
-                    boxShadow: '0 2px 0 #d4a020',
-                  }}
+                  style={{ background: 'rgba(255,248,220,0.88)', border: '1.5px solid #f0c060', boxShadow: '0 2px 0 #d4a020' }}
                 >
                   <p className="text-sm font-bold" style={{ color: '#3d2200' }}>{stat.value}</p>
                   <p className="text-[10px] mt-0.5" style={{ color: '#8a6030' }}>{stat.label}</p>
