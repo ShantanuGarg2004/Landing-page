@@ -19,15 +19,15 @@ export function Footer() {
           <div className="space-y-4 sm:col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2.5">
               <div className="w-9 h-9 bg-primary rounded-lg flex items-center justify-center shrink-0">
-                <span className="text-white font-bold text-base leading-none">स</span>
+                <span className="text-white font-bold text-base leading-none">S</span>
               </div>
               <div className="flex flex-col leading-none">
-                <span className="font-bold text-base">Sushima</span>
-                <span className="text-[10px] text-white/50 font-normal">Gaon ke liye</span>
+                <span className="font-bold text-base">SAV Life Sciences</span>
+                <span className="text-[10px] text-white/50 font-normal">Pharmaceuticals</span>
               </div>
             </Link>
             <p className="text-sm text-white/60 leading-relaxed">
-              Simple, bharosemand, aur affordable products – seedha gaon ke logon ke liye.
+              Trusted animal healthcare solutions for better growth, health and productivity.
             </p>
             {/* Contact quick links */}
             <div className="space-y-2">
@@ -66,7 +66,7 @@ export function Footer() {
 
           {/* Contact */}
           <div className="space-y-3">
-            <h4 className="font-semibold text-sm text-white/90 uppercase tracking-wide">Sampark</h4>
+            <h4 className="font-semibold text-sm text-white/90 uppercase tracking-wide">Contact</h4>
             <ul className="space-y-2.5">
               <li className="flex items-start gap-2 text-sm text-white/60">
                 <Phone size={14} className="mt-0.5 shrink-0" />
@@ -74,27 +74,27 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2 text-sm text-white/60">
                 <MessageCircle size={14} className="mt-0.5 shrink-0" />
-                hello@sushima.com
+                For orders & support: Call / WhatsApp
               </li>
               <li className="flex items-start gap-2 text-sm text-white/60">
                 <MapPin size={14} className="mt-0.5 shrink-0" />
-                Gaon, India
+                India
               </li>
             </ul>
           </div>
 
           {/* Hours */}
           <div className="space-y-3">
-            <h4 className="font-semibold text-sm text-white/90 uppercase tracking-wide">Samay</h4>
+            <h4 className="font-semibold text-sm text-white/90 uppercase tracking-wide">Hours</h4>
             <ul className="space-y-2">
               <li className="flex items-start gap-2 text-sm text-white/60">
                 <Clock size={14} className="mt-0.5 shrink-0" />
                 <span>
-                  Somvar – Shanivar<br />
+                  Monday – Saturday<br />
                   10 AM – 6 PM
                 </span>
               </li>
-              <li className="text-sm text-white/40 pl-5">Ravivar: Band</li>
+              <li className="text-sm text-white/40 pl-5">Sunday: Closed</li>
             </ul>
           </div>
         </motion.div>
@@ -107,8 +107,8 @@ export function Footer() {
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-white/40"
           >
-            <p>© 2026 Sushima. Sab kuch simple.</p>
-            <p>Made with care for gaon ke log 🌾</p>
+            <p>© 2026 SAV Life Sciences Pharmaceuticals. All rights reserved.</p>
+            <p>Trusted animal healthcare solutions 🌿</p>
           </motion.div>
         </div>
       </div>

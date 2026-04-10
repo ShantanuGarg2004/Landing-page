@@ -2,38 +2,48 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Phone, MessageCircle, Package } from 'lucide-react'
+import { ShoppingBag, Phone, MessageCircle, Package } from 'lucide-react'
 
 const steps = [
   {
     number: '01',
-    icon: Phone,
+    icon: ShoppingBag,
     iconBg: 'bg-primary/10',
     iconColor: 'text-primary',
-    title: 'Call ya Missed Call Karein',
-    description: 'Hamare number +91 98765 43210 par call karein. Agar balance nahi hai toh sirf missed call de dein — hum khud call karke wapas baat karenge.',
-    tip: 'Missed call bhi kaam karega!',
+    title: 'Product Select Karein',
+    description: 'Apni requirement ke according product choose karein. Hamare products dairy animals, pets aur general livestock ke liye available hain.',
+    tip: 'View all products on our website',
     tipColor: 'bg-primary/10 text-primary',
   },
   {
     number: '02',
-    icon: MessageCircle,
+    icon: Phone,
     iconBg: 'bg-secondary/10',
     iconColor: 'text-secondary',
-    title: 'WhatsApp par Message Karein',
-    description: 'WhatsApp par message karein — product ka naam aur apna address batayein. Hum aapko price aur delivery ki poori jaankari denge.',
-    tip: 'Seedha message bhejein, koi app download nahi karni',
+    title: 'Call ya WhatsApp Karein',
+    description: 'Direct humse connect karein – call karein ya WhatsApp par message karein. Hum aapko product details, dosage aur pricing ki poori jaankari denge.',
+    tip: 'Direct support – no middleman',
     tipColor: 'bg-secondary/10 text-secondary',
   },
   {
     number: '03',
-    icon: Package,
+    icon: MessageCircle,
     iconBg: 'bg-[var(--accent-blue)]/10',
     iconColor: 'text-[var(--accent-blue)]',
-    title: 'Ghar Baithe Paayein',
-    description: 'Aapka samaan 3-5 dinon mein ghar pahunch jaata hai. Cash on Delivery available hai — paisa sirf tab dein jab samaan haath mein aa jaaye.',
-    tip: 'Cash on Delivery available',
+    title: 'Order Confirm Karein',
+    description: 'Hum aapko complete information aur price batayenge. Order confirm hone ke baad aapka product immediately dispatch ho jaata hai.',
+    tip: 'No online payment required',
     tipColor: 'bg-[var(--accent-blue)]/10 text-[var(--accent-blue)]',
+  },
+  {
+    number: '04',
+    icon: Package,
+    iconBg: 'bg-[var(--accent-teal)]/10',
+    iconColor: 'text-[var(--accent-teal)]',
+    title: 'Delivery Paayein',
+    description: 'Fast delivery directly aapke paas. Hum ensure karte hain ki aapka product safe aur timely pahunche – bina kisi tension ke.',
+    tip: 'Fast & safe delivery guaranteed',
+    tipColor: 'bg-[var(--accent-teal)]/10 text-[var(--accent-teal)]',
   },
 ]
 
@@ -54,15 +64,15 @@ export function HowToOrderSection() {
         >
           <div>
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-2">
-              Order Kaise Karein
+              How to Order
             </p>
             <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-              Teen aasaan{' '}
-              <span className="gradient-text">steps mein order</span>
+              Simple process,{' '}
+              <span className="gradient-text">zero confusion</span>
             </h2>
           </div>
           <p className="text-sm text-muted-foreground sm:text-right max-w-xs">
-            Koi internet ya app ki zaroorat nahi — sirf ek call kaafi hai
+            Simple process – no confusion, no risk. Sirf connect karein aur order karein
           </p>
         </motion.div>
 
@@ -74,7 +84,7 @@ export function HowToOrderSection() {
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.12 } } }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-5"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
         >
           {steps.map((step) => {
             const Icon = step.icon
@@ -125,19 +135,19 @@ export function HowToOrderSection() {
           className="mt-8 bg-foreground rounded-xl px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4"
         >
           <div>
-            <p className="text-white font-semibold text-sm">Abhi order karna chahte hain?</p>
-            <p className="text-white/50 text-xs mt-0.5">Somvar – Shanivar, Subah 10 – Shaam 6 baje</p>
+            <p className="text-white font-semibold text-sm">Ready to order? Connect with us now</p>
+            <p className="text-white/50 text-xs mt-0.5">Monday – Saturday, 10 AM – 6 PM</p>
           </div>
           <div className="flex gap-3 shrink-0">
             <a
-              href="tel:+919876543210"
+              href="tel:+917452897444"
               className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-colors"
             >
               <Phone size={14} />
-              Call Karein
+              Call Now
             </a>
             <a
-              href="https://wa.me/919876543210?text=Namaste!%20Mujhe%20Sushima%20products%20ke%20baare%20mein%20jaankari%20chahiye."
+              href="https://wa.me/917452897444?text=Namaste!%20Mujhe%20SAV%20Life%20Sciences%20products%20ke%20baare%20mein%20jaankari%20chahiye."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-colors"

@@ -7,8 +7,8 @@ import { CTASection } from '@/components/cta-section'
 import { Footer } from '@/components/footer'
 
 export const metadata = {
-  title: 'Sushima - Gaon ke liye Simple Products',
-  description: 'Simple, bharosemand, aur affordable products for village life',
+  title: 'SAV Life Sciences Pharmaceuticals – Trusted Animal Healthcare',
+  description: 'High-quality animal healthcare products for better growth, health and productivity. Trusted by 1000+ customers since 2022.',
 }
 
 export default function Home() {

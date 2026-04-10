@@ -13,12 +13,12 @@ export default function ProductsPage() {
   const allProducts = getAllProducts()
 
   // Derive unique categories from data
-  const categories = ['Sab', ...Array.from(new Set(allProducts.map((p) => p.category)))]
+  const categories = ['All', ...Array.from(new Set(allProducts.map((p) => p.category)))]
 
-  const [activeCategory, setActiveCategory] = useState('Sab')
+  const [activeCategory, setActiveCategory] = useState('All')
 
   const filtered =
-    activeCategory === 'Sab'
+    activeCategory === 'All'
       ? allProducts
       : allProducts.filter((p) => p.category === activeCategory)
 
@@ -34,7 +34,7 @@ export default function ProductsPage() {
               Home
             </Link>
             <span className="text-muted-foreground">/</span>
-            <span className="text-foreground font-medium">Sab Products</span>
+            <span className="text-foreground font-medium">All Products</span>
           </div>
         </div>
 
@@ -46,7 +46,7 @@ export default function ProductsPage() {
             className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors mb-8"
           >
             <ChevronLeft size={16} />
-            Mukhya Prishtha par Wapas
+            Back to Home
           </Link>
 
           {/* Page header */}
@@ -57,12 +57,12 @@ export default function ProductsPage() {
             className="mb-10"
           >
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-2">
-              Hamare Sabhi Products
+              All Products
             </p>
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
               <h1 className="text-2xl md:text-3xl font-bold text-foreground">
-                Gaon ki zaroorat ke liye{' '}
-                <span className="gradient-text">sahi cheezein</span>
+                High-quality solutions for{' '}
+                <span className="gradient-text">better animal health</span>
               </h1>
               <p className="text-sm text-muted-foreground sm:text-right">
                 {allProducts.length} products available
@@ -122,7 +122,7 @@ export default function ProductsPage() {
           {filtered.length === 0 && (
             <div className="text-center py-20">
               <p className="text-muted-foreground text-sm">
-                Is category mein abhi koi product nahi hai.
+                No products found in this category.
               </p>
             </div>
           )}
@@ -130,17 +130,17 @@ export default function ProductsPage() {
           {/* Bottom contact nudge */}
           <div className="mt-12 bg-white border border-border rounded-xl px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-foreground font-medium text-center sm:text-left">
-              Koi product pasand aaya? Order karne ke liye seedha sampark karein.
+              Found the right product? Connect with us to place your order.
             </p>
             <div className="flex gap-3 shrink-0">
               <a
-                href="tel:+919876543210"
+                href="tel:+917452897444"
                 className="text-xs font-semibold text-white bg-primary hover:bg-primary/90 px-4 py-2 rounded-lg transition-colors"
               >
-                Call Karein
+                Call Now
               </a>
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/917452897444"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs font-semibold text-white bg-secondary hover:bg-secondary/90 px-4 py-2 rounded-lg transition-colors"

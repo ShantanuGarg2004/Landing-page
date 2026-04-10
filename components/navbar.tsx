@@ -54,11 +54,11 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
             <div className="w-9 h-9 bg-primary rounded-lg flex items-center justify-center shrink-0">
-              <span className="text-white font-bold text-base leading-none">स</span>
+              <span className="text-white font-bold text-base leading-none">S</span>
             </div>
             <div className="flex flex-col leading-none">
-              <span className="font-bold text-lg text-foreground tracking-tight">Sushima</span>
-              <span className="text-[10px] text-muted-foreground font-normal">Gaon ke liye</span>
+              <span className="font-bold text-lg text-foreground tracking-tight">SAV Life Sciences</span>
+              <span className="text-[10px] text-muted-foreground font-normal">Pharmaceuticals</span>
             </div>
           </Link>
 

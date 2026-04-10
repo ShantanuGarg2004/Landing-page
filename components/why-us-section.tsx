@@ -2,40 +2,48 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { PhoneCall, Sprout, ShieldCheck, Truck } from 'lucide-react'
+import { FlaskConical, Star, Microscope, Leaf, PhoneCall } from 'lucide-react'
 
 const reasons = [
   {
     id: 1,
-    icon: PhoneCall,
+    icon: FlaskConical,
     iconBg: 'bg-primary/10',
     iconColor: 'text-primary',
-    title: 'Simple aur Easy Process',
-    description: 'Koi form nahi, koi jhanjhat nahi. Bas call ya WhatsApp karein aur kaam ho jaata hai.',
+    title: 'Quality You Can Trust',
+    description: 'Har product carefully tested aur effective ingredients ke saath banaya gaya hai. No compromise on quality – kabhi nahi.',
   },
   {
     id: 2,
-    icon: Sprout,
+    icon: Star,
     iconBg: 'bg-secondary/10',
     iconColor: 'text-secondary',
-    title: 'Gaon ke Logon ke liye Bana',
-    description: 'Hum samajhte hain gaon ki zaroorat. Isliye products simple, durable, aur useful hain.',
+    title: 'Proven Results',
+    description: 'Farmers aur animal owners ke real results aur positive feedback ke saath. Hazaaron customers ka bharosa hamare saath hai.',
   },
   {
     id: 3,
-    icon: ShieldCheck,
+    icon: Microscope,
     iconBg: 'bg-[var(--accent-blue)]/10',
     iconColor: 'text-[var(--accent-blue)]',
-    title: 'Quality ka Full Bharosa',
-    description: 'Har product check kiya jaata hai. Quality mein koi compromise nahi – kabhi nahi.',
+    title: 'Expert Formulations',
+    description: 'Scientific aur practical approach ka perfect combination. Har product vet experts ke saath develop kiya gaya hai.',
   },
   {
     id: 4,
-    icon: Truck,
+    icon: Leaf,
     iconBg: 'bg-[var(--accent-teal)]/10',
     iconColor: 'text-[var(--accent-teal)]',
-    title: 'Fast Delivery, Bina Tension',
-    description: 'Order karo aur chinta khatam. Samay par delivery guaranteed hai.',
+    title: 'Easy to Use',
+    description: 'Simple usage, clear instructions – kisi bhi user ke liye easy. Koi confusion nahi, seedha results.',
+  },
+  {
+    id: 5,
+    icon: PhoneCall,
+    iconBg: 'bg-[var(--accent-gold)]/10',
+    iconColor: 'text-[var(--accent-gold)]',
+    title: 'Direct Support',
+    description: 'Call aur WhatsApp par direct guidance available hai. Hum seedha aapke saath hain – koi middleman nahi.',
   },
 ]
 
@@ -46,7 +54,7 @@ export function WhyUsSection() {
     <section className="py-16 md:py-20 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
 
-        {/* Header row — label left, description right */}
+        {/* Header row */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -56,28 +64,29 @@ export function WhyUsSection() {
         >
           <div>
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-2">
-              Hum ko kyun Choose Karein
+              Why Choose Us
             </p>
             <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-              Hazaaron gaon walon ka <span className="gradient-text">bharosa</span>
+              Why Choose{' '}
+              <span className="gradient-text">SAV Life Sciences?</span>
             </h2>
           </div>
           <p className="text-sm text-muted-foreground sm:text-right max-w-xs">
-            Inhi karanon ki wajah se log baar baar hamare paas aate hain
+            Inhi karanon ki wajah se 1000+ customers hamare products par trust karte hain
           </p>
         </motion.div>
 
         <div className="border-t border-border mb-10" />
 
-        {/* 2×2 tile grid — clean window-pane */}
+        {/* Tile grid — 2 cols on sm, 3 on lg */}
         <motion.div
           ref={ref}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
-          className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
         >
-          {reasons.map((reason, idx) => {
+          {reasons.map((reason) => {
             const Icon = reason.icon
             return (
               <motion.div

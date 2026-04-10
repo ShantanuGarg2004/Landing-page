@@ -18,18 +18,20 @@ export function CTASection() {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <p className="text-primary text-sm font-semibold uppercase tracking-wide mb-3">Sampark Karein</p>
+                <p className="text-primary text-sm font-semibold uppercase tracking-wide mb-3">Contact Us</p>
                 <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-snug">
-                  Aaj Hi Order Karein –<br />Easy aur Fast
+                  Apne animals ki health aur productivity ko improve karein –{' '}
+                  <span className="text-primary">aaj hi start karein</span>
                 </h2>
                 <p className="text-white/60 text-sm leading-relaxed mb-6">
-                  Call ya WhatsApp karein. Hum gaon ke logon ki baat samajhte hain aur seedha baat karte hain – koi complicated process nahi.
+                  Call karein ya WhatsApp karein aur sahi product choose karein. Hum directly
+                  aapke saath hain – koi confusion nahi, koi risk nahi.
                 </p>
 
                 {/* Availability badge */}
                 <div className="inline-flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2.5 text-sm text-white/80">
                   <Clock size={14} className="text-primary" />
-                  <span>Somvar – Shanivar &nbsp;|&nbsp; 10 AM – 6 PM</span>
+                  <span>Monday – Saturday &nbsp;|&nbsp; 10 AM – 6 PM</span>
                 </div>
               </motion.div>
             </div>
@@ -45,7 +47,7 @@ export function CTASection() {
               >
                 {/* Phone number display */}
                 <div className="bg-white/10 rounded-xl px-5 py-4 text-center">
-                  <p className="text-white/50 text-xs mb-1">Hamara Number</p>
+                  <p className="text-white/50 text-xs mb-1">Our Number</p>
                   <p className="text-white text-2xl font-bold tracking-wide">+91 74528 97444</p>
                 </div>
 
@@ -55,18 +57,18 @@ export function CTASection() {
                   className="flex items-center justify-center gap-3 w-full bg-primary hover:bg-primary/90 text-white px-6 py-3.5 rounded-xl font-semibold text-sm transition-colors duration-150"
                 >
                   <Phone size={18} />
-                  Call Karein
+                  Call Now
                 </a>
 
                 {/* WhatsApp button */}
                 <a
-                  href="https://wa.me/917452897444"
+                  href="https://wa.me/917452897444?text=Namaste!%20Mujhe%20SAV%20Life%20Sciences%20products%20ke%20baare%20mein%20jaankari%20chahiye."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 w-full bg-secondary hover:bg-secondary/90 text-white px-6 py-3.5 rounded-xl font-semibold text-sm transition-colors duration-150"
                 >
                   <MessageCircle size={18} />
-                  WhatsApp Karein
+                  WhatsApp Now
                 </a>
 
                 <p className="text-white/30 text-xs text-center">

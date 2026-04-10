@@ -5,32 +5,32 @@ import { motion } from 'framer-motion'
 const stats = [
   {
     value: '1000+',
-    label: 'Khush Customers',
-    description: 'Hazaaron ghar jahan Sushima products roz kaam aate hain.',
+    label: 'Happy Customers',
+    description: 'Hazaaron farmers aur animal owners jo SAV products par trust karte hain.',
     accentBorder: 'border-l-[var(--accent-blue)]',
     color: 'text-[var(--accent-blue)]',
   },
   {
-    value: '5+',
-    label: 'Saal Ka Sath',
-    description: 'Paanch saalon se gaon ke logon ke saath – bharosemand aur pakka.',
+    value: 'Since 2022',
+    label: 'Trusted Brand',
+    description: '2022 se quality animal healthcare products provide kar rahe hain – bharosemand aur pakka.',
     accentBorder: 'border-l-[var(--accent-teal)]',
     color: 'text-[var(--accent-teal)]',
   },
   {
     value: '100%',
-    label: 'Transparency',
-    description: 'Koi hidden charge nahi, koi dhoka nahi – seedha aur saaf.',
+    label: 'Quality Focus',
+    description: 'Har product carefully tested aur quality-checked – koi compromise nahi.',
     accentBorder: 'border-l-primary',
     color: 'text-primary',
   },
 ]
 
 const promises = [
-  'Gaon ke logon ke liye trusted brand',
-  'Simple ordering – sirf ek call ya WhatsApp',
-  'Koi bhi problem ho, hum saath hain',
-  'Products jo saalon tak chalte hain',
+  'Quality you can trust – always',
+  'Proven results, real feedback',
+  'Expert formulations, scientifically designed',
+  'Direct support via Call & WhatsApp',
 ]
 
 export function AboutSection() {
@@ -48,14 +48,15 @@ export function AboutSection() {
         >
           <div>
             <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-2">
-              Hamari Kahani
+              About Us
             </p>
             <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-              Sushima ke <span className="gradient-text">Baare Mein</span>
+              About{' '}
+              <span className="gradient-text">SAV Life Sciences</span>
             </h2>
           </div>
           <p className="text-sm text-muted-foreground sm:text-right max-w-xs">
-            Paanch saalon ki mehnat aur hazaaron logon ka bharosa
+            Trusted animal healthcare solutions since 2022
           </p>
         </motion.div>
 
@@ -67,7 +68,7 @@ export function AboutSection() {
           {/* Left col (3/5) */}
           <div className="lg:col-span-3 flex flex-col gap-5">
 
-            {/* Story card — natural height, no flex-1 */}
+            {/* Story card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -76,23 +77,26 @@ export function AboutSection() {
               className="bg-white border border-border rounded-xl p-6"
             >
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                Hum simple aur useful products provide karte hain jo gaon ke log easily use kar
-                sakein. Hamara goal hai quality cheezein sahi price par dena – bina kisi chaal-baazi ke.
+                SAV Life Sciences Pharmaceuticals animal healthcare products provide karta hai jo
+                productivity, health aur performance improve karte hain. Hamare products
+                scientifically designed hain aur real-world use ke liye banaye gaye hain – taaki
+                aapko actual results milein.
               </p>
               <p className="text-sm text-muted-foreground leading-relaxed mb-5">
-                Har product hum careful se check karte hain. Sab kuch seedha aur transparent –
-                bilkul koi hidden charges ya drama nahi. Aapki bharosa hi hamara sabse bada asset hai.
+                Hum directly customers ke saath kaam karte hain taaki unhe best solution mile.
+                Koi complicated process nahi – sirf connect karein aur sahi product paayein.
               </p>
-              {/* Pull quote — adds content weight to balance the card */}
+              {/* Pull quote */}
               <div className="border-l-2 border-primary pl-4">
                 <p className="text-sm font-semibold text-foreground italic leading-relaxed">
-                  "Gaon ka har ghar hamara parivaar hai – aur unki zaroorat hamari zimmedaari."
+                  "Hamare animals ki sehat hi hamari priority hai – aur SAV Life Sciences yahi
+                  ensure karta hai."
                 </p>
-                <p className="text-xs text-muted-foreground mt-1.5">— Sushima Team</p>
+                <p className="text-xs text-muted-foreground mt-1.5">— SAV Life Sciences Team</p>
               </div>
             </motion.div>
 
-            {/* Promises card — flex-1 so it fills remaining column height */}
+            {/* Promises card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -101,7 +105,7 @@ export function AboutSection() {
               className="flex-1 bg-white border border-border rounded-xl p-6 flex flex-col justify-center"
             >
               <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest mb-4">
-                Hamara Vaada
+                Our Commitment
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {promises.map((point, i) => (
@@ -117,7 +121,7 @@ export function AboutSection() {
 
           </div>
 
-          {/* Right col (2/5) — stat cards each flex-1 */}
+          {/* Right col (2/5) — stat cards */}
           <div className="lg:col-span-2 flex flex-col gap-5">
             {stats.map((stat, i) => (
               <motion.div
