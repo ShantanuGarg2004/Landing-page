@@ -1,62 +1,63 @@
 import productsData from '@/data/products.json'
 
-export interface ProductPrice {
-  display: string   // "₹299 se shuru" — shown on card
-  range: string     // "₹299 – ₹599" — shown on detail page
-  note: string      // "Size ke hisaab se daam alag ho sakta hai"
-}
-
-export interface ProductSpec {
-  label: string
-  value: string
-}
-
-export interface Product {
+export type Product = {
   id: number
   slug: string
   name: string
-  shortDescription: string
-  image: string
   category: string
-  badge: string | null        // "Best Seller", "New", null
-  bestSeller: boolean         // true = shown on homepage
   headline: string
   description: string
-  price: ProductPrice
+  price: {
+    display: string
+    range: string
+    note: string
+  }
+  image: string
+  badge?: string
   inStock: boolean
-  deliveryDays: string        // "3-5 din"
+  deliveryDays: string
   cashOnDelivery: boolean
+
   features: string[]
-  specifications: ProductSpec[]
+
+  specifications: {
+    label: string
+    value: string
+  }[]
+
+  composition?: string[]
+  usage?: string[]
+  directions?: string
+
   useCases: string[]
-  whatsappMessage: string     // pre-filled WhatsApp message for this product
 }
 
-export const products: Product[] = productsData as Product[]
-
-/** All products — used on the /products page */
+// ✅ All products
 export function getAllProducts(): Product[] {
-  return products
+  return productsData
 }
 
-/** Only bestSeller=true products — used on the homepage */
-export function getBestSellers(): Product[] {
-  return products.filter((p) => p.bestSeller)
-}
-
-/** Lookup by slug — used on detail page */
+// ✅ Get by slug
 export function getProductBySlug(slug: string): Product | undefined {
-  return products.find((p) => p.slug === slug)
+  return productsData.find((p) => p.slug === slug)
 }
 
-/** Build WhatsApp URL with product-specific pre-filled message */
+// ✅ 🔥 IMPORTANT: ADD THIS (THIS IS YOUR ERROR FIX)
+export function getBestSellers(): Product[] {
+  return productsData.slice(0, 4)
+}
+
+// ✅ WhatsApp URL
 export function getWhatsAppUrl(product: Product): string {
   const phone = '917452897444'
-  const message = encodeURIComponent(product.whatsappMessage)
-  return `https://wa.me/${phone}?text=${message}`
-}
 
-/** Generic WhatsApp URL — used in sections without a specific product */
-export function getGenericWhatsAppUrl(): string {
-  return 'https://wa.me/917452897444'
+  const message = `Namaste 🙏
+
+Mujhe *${product.name}* ke baare mein jaankari chahiye.
+
+Price: ${product.price.display}
+
+Kripya details share karein.`
+
+  return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
 }

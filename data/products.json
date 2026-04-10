@@ -1,260 +1,432 @@
 [
   {
     "id": 1,
-    "slug": "mazboot-storage-drum",
-    "name": "Mazboot Storage Drum",
-    "shortDescription": "Roz ke use ke liye best",
-    "image": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Product1-If77SpkCNg3UQYWsojydEEcMyvBGtE.png",
-    "category": "Storage",
-    "badge": "Best Seller",
-    "bestSeller": true,
-    "headline": "Paani aur anaaj store karne ke liye perfect",
-    "description": "Yeh drum paani aur anaaj store karne ke liye perfect hai. Iska material strong hai aur leak-proof design hai, jisse paani ya samaan safe rehta hai. Gaon mein roz ke use ke liye yeh bahut useful hai, chahe paani store karna ho ya anaaj bachake rakhna ho. Mazboot plastic se bana hai jo long time tak chalega.",
+    "slug": "calcipet-plus",
+    "name": "Calcipet Plus",
+    "category": "Pet Care",
+    "headline": "Strong Bones & Fast Recovery",
+    "description": "Pets ke liye calcium aur vitamins ka powerful combination jo bones strong banata hai aur recovery fast karta hai.",
     "price": {
-      "display": "₹299 se shuru",
-      "range": "₹299 – ₹599",
-      "note": "Size ke hisaab se daam alag ho sakta hai"
+      "display": "₹250 – ₹350",
+      "range": "Pack size ke hisaab se",
+      "note": "Exact price ke liye contact karein"
     },
+    "image": "/products/calcipet-plus.png",
+    "badge": "Popular",
     "inStock": true,
-    "deliveryDays": "3-5 din",
+    "deliveryDays": "2-4 din",
     "cashOnDelivery": true,
     "features": [
-      "Leak-proof design",
-      "Strong plastic material",
-      "Long lasting durability",
-      "Easy to clean",
-      "Weather resistant",
-      "No rust or corrosion"
+      "Fracture recovery fast karta hai",
+      "Muscles aur bones strong banata hai",
+      "Weak pets ko strength deta hai",
+      "Growth improve karta hai"
     ],
     "specifications": [
-      { "label": "Material", "value": "Heavy-duty plastic" },
-      { "label": "Capacity", "value": "50-100 litre" },
-      { "label": "Usage", "value": "Water & grain storage" },
-      { "label": "Durability", "value": "Very High" },
-      { "label": "Weight", "value": "Light & portable" },
-      { "label": "Suitable for", "value": "Home & farm use" }
+      { "label": "Type", "value": "Calcium Supplement" },
+      { "label": "Suitable For", "value": "Dogs & Cats" }
     ],
+    "composition": [
+      "Vitamin A – 45000 IU",
+      "Vitamin D3 – 8000 IU",
+      "Calcium – 1628 mg",
+      "Phosphorus – 838.5 mg",
+      "Vitamin B12 – 100 mcg"
+    ],
+    "usage": [
+      "Puppies: 1/2 teaspoon daily",
+      "Adult dogs: 1 teaspoon daily",
+      "Heavy dogs: 2 teaspoons daily"
+    ],
+    "directions": "Food ke saath ya vet ke advice ke according use karein",
     "useCases": [
-      "Ghar mein paani store karne ke liye",
-      "Barsat ke paani ko rakhen",
-      "Anaaj aur dal bachake rakhne ke liye",
-      "Kheti mein paani supply ke liye"
-    ],
-    "whatsappMessage": "Namaste! Mujhe Mazboot Storage Drum ke baare mein jaankari chahiye. Kripya price aur delivery details batayein."
+      "Weak pets",
+      "Bone weakness",
+      "Growth issues",
+      "Post illness recovery"
+    ]
   },
+
   {
     "id": 2,
-    "slug": "solar-led-light",
-    "name": "Solar LED Light",
-    "shortDescription": "Simple aur useful",
-    "image": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Product2-YYAPOerXeWo9ywU5H2zfhvqVSZmXrn.png",
-    "category": "Lighting",
-    "badge": "New",
-    "bestSeller": true,
-    "headline": "Bijli ke bina bhi bright roshni",
-    "description": "Yeh solar light bijli ke bina bhi kaam karti hai. Din mein charge hoti hai aur raat mein bright roshni deti hai. Gaon ke areas jahan light problem hoti hai, wahan yeh best solution hai. Battery backup 6-8 ghante tak deta hai aur bahut simple use hai.",
+    "slug": "multisip-syrup",
+    "name": "Multisip Syrup",
+    "category": "Pet Care",
+    "headline": "Energy & Overall Health Booster",
+    "description": "Daily health tonic jo pets ki energy, heart health aur skin ko healthy rakhta hai.",
     "price": {
-      "display": "₹499 se shuru",
-      "range": "₹499 – ₹899",
-      "note": "Model aur brightness ke hisaab se daam alag"
+      "display": "₹200 – ₹300",
+      "range": "Bottle size ke hisaab se",
+      "note": "Contact for best price"
     },
+    "image": "/products/multisip.png",
     "inStock": true,
-    "deliveryDays": "3-5 din",
+    "deliveryDays": "2-4 din",
     "cashOnDelivery": true,
     "features": [
-      "Solar powered - free electricity",
-      "Bright LED light",
-      "Low maintenance required",
-      "Easy installation",
-      "Weather-resistant design",
-      "Long battery life"
+      "Energy boost karta hai",
+      "Skin aur coat healthy rakhta hai",
+      "Heart health improve karta hai",
+      "Growth support karta hai"
     ],
     "specifications": [
-      { "label": "Power Source", "value": "Solar panel" },
-      { "label": "Battery Backup", "value": "6-8 hours" },
-      { "label": "Usage", "value": "Indoor & outdoor" },
-      { "label": "Charging", "value": "Direct sunlight" },
-      { "label": "Brightness", "value": "Very bright LED" },
-      { "label": "Installation", "value": "Easy - no wiring needed" }
+      { "label": "Type", "value": "Multivitamin Syrup" },
+      { "label": "Suitable For", "value": "Dogs & Cats" }
     ],
+    "composition": [
+      "Vitamin A",
+      "Vitamin B Complex",
+      "Vitamin D3",
+      "Iron",
+      "Zinc"
+    ],
+    "usage": [
+      "Small pets: 1/2 teaspoon daily",
+      "Medium pets: 1 teaspoon daily",
+      "Large pets: 2 teaspoons daily"
+    ],
+    "directions": "Feed ke saath mix karein ya vet ke according",
     "useCases": [
-      "Ghar ke andar roshni ke liye",
-      "Kheti mein kaam karte samay",
-      "Bahar ke courtyard mein",
-      "Emergency lighting ke liye"
-    ],
-    "whatsappMessage": "Namaste! Mujhe Solar LED Light ke baare mein jaankari chahiye. Kripya price aur delivery details batayein."
+      "Low energy",
+      "Skin problems",
+      "Weak pets",
+      "Daily nutrition"
+    ]
   },
+
   {
     "id": 3,
-    "slug": "hand-pump-motor-kit",
-    "name": "Hand Pump Motor Kit",
-    "shortDescription": "Kam daam mein achha",
-    "image": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Product3-GpK3vXsOzNwsLexAvWbgvf2RjcSWhu.png",
-    "category": "Water Supply",
-    "badge": null,
-    "bestSeller": true,
-    "headline": "Paani bharne ka kaam fast aur easy",
-    "description": "Yeh motor kit paani bharne ka kaam fast aur easy bana deti hai. Manual mehnat kam hoti hai aur paani jaldi mil jata hai. Kheti aur ghar dono ke liye useful hai. Strong build quality hai aur long time tak reliable rahega.",
+    "slug": "calci-gold-gel",
+    "name": "Calci Gold Gel",
+    "category": "Dairy",
+    "headline": "Milk Production & Strength Support",
+    "description": "Dairy animals ke liye calcium-rich gel jo milk production aur bone strength improve karta hai.",
     "price": {
-      "display": "₹799 se shuru",
-      "range": "₹799 – ₹1,499",
-      "note": "Power aur flow rate ke hisaab se daam alag"
+      "display": "₹300 – ₹450",
+      "range": "Pack ke hisaab se",
+      "note": "Bulk discount available"
     },
+    "image": "/products/calci-gold.png",
     "inStock": true,
-    "deliveryDays": "5-7 din",
+    "deliveryDays": "2-5 din",
     "cashOnDelivery": true,
     "features": [
-      "Fast water flow",
-      "Easy installation",
-      "Energy efficient",
-      "Strong build quality",
-      "Low noise operation",
-      "Reliable performance"
+      "Milk yield improve karta hai",
+      "Bone strength badhata hai",
+      "Calcium deficiency door karta hai"
     ],
     "specifications": [
-      { "label": "Type", "value": "Motor kit system" },
-      { "label": "Usage", "value": "Water pumping" },
-      { "label": "Power", "value": "Electric motor" },
-      { "label": "Flow Rate", "value": "High capacity" },
-      { "label": "Build Quality", "value": "Heavy-duty" },
-      { "label": "Suitable for", "value": "Farms & homes" }
+      { "label": "Type", "value": "Calcium Gel" },
+      { "label": "Suitable For", "value": "Cow & Buffalo" }
     ],
+    "composition": [
+      "Calcium – 43500 mg",
+      "Phosphorus – 21750 mg",
+      "Vitamin A",
+      "Vitamin D3",
+      "Vitamin B12"
+    ],
+    "usage": [
+      "1 bottle daily (as per condition)"
+    ],
+    "directions": "Direct oral use ya vet ke guidance se",
     "useCases": [
-      "Tubewell se paani nikalna",
-      "Well mein paani bharna",
-      "Kheti mein paani dena",
-      "Ghar ke tank mein paani dena"
-    ],
-    "whatsappMessage": "Namaste! Mujhe Hand Pump Motor Kit ke baare mein jaankari chahiye. Kripya price aur delivery details batayein."
+      "Milk yield drop",
+      "Calcium deficiency",
+      "Post delivery weakness"
+    ]
   },
+
   {
     "id": 4,
-    "slug": "multi-use-plastic-crate",
-    "name": "Multi-Use Plastic Crate",
-    "shortDescription": "Use karna bilkul easy",
-    "image": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Product4-uKYeM15UYPYqgB3iNOOKSxA3fpFC4K.png",
-    "category": "Storage & Transport",
-    "badge": null,
-    "bestSeller": false,
-    "headline": "Sabji, doodh, samaan sab rakh sakte ho",
-    "description": "Yeh crate sabzi, doodh ya kisi bhi samaan ko rakhne ke liye perfect hai. Strong aur durable hai, easily carry ho jata hai aur long time tak chalta hai. Ghar mein bhi use kar sakte ho aur bazaar mein samaan le jaate samay bhi.",
+    "slug": "s-cal-gel",
+    "name": "S-Cal Gel",
+    "category": "Dairy",
+    "headline": "Recovery & Fertility Booster",
+    "description": "Milk fever recovery aur fertility improve karne ke liye effective gel.",
     "price": {
-      "display": "₹199 se shuru",
-      "range": "₹199 – ₹399",
-      "note": "Size ke hisaab se daam alag ho sakta hai"
+      "display": "₹350 – ₹500",
+      "range": "Pack size ke hisaab se",
+      "note": "Vet recommended"
     },
+    "image": "/products/s-cal.png",
     "inStock": true,
-    "deliveryDays": "3-5 din",
+    "deliveryDays": "2-5 din",
     "cashOnDelivery": true,
     "features": [
-      "Lightweight but strong",
-      "Strong build quality",
-      "Easy to carry handles",
-      "Multi-purpose usage",
-      "Stackable design",
-      "Easy to clean"
+      "Milk fever recovery",
+      "Fertility improve karta hai",
+      "Milk production badhata hai"
     ],
     "specifications": [
-      { "label": "Material", "value": "Food-grade plastic" },
-      { "label": "Usage", "value": "Storage & transport" },
-      { "label": "Capacity", "value": "High load bearing" },
-      { "label": "Durability", "value": "Very durable" },
-      { "label": "Size", "value": "Medium & large" },
-      { "label": "Suitable for", "value": "Daily household use" }
+      { "label": "Type", "value": "Recovery Gel" },
+      { "label": "Suitable For", "value": "Dairy Animals" }
     ],
+    "composition": [
+      "Calcium",
+      "Magnesium",
+      "Niacinamide",
+      "Herbal extracts"
+    ],
+    "usage": [
+      "1 bottle per day"
+    ],
+    "directions": "Vet ke guidance ke saath use karein",
     "useCases": [
-      "Sabzi aur phal rakhne ke liye",
-      "Doodh aur dairy products ke liye",
-      "Ghar se bazaar le jaane ke liye",
-      "Kheti mein phasal rakhne ke liye"
-    ],
-    "whatsappMessage": "Namaste! Mujhe Multi-Use Plastic Crate ke baare mein jaankari chahiye. Kripya price aur delivery details batayein."
+      "Milk fever",
+      "Low fertility",
+      "Weak animals"
+    ]
   },
+
   {
     "id": 5,
-    "slug": "heavy-duty-water-pipe",
-    "name": "Heavy Duty Water Pipe",
-    "shortDescription": "Bharosa ke saath",
-    "image": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Product5-ISzUmicCAUhHRQYbVXVvweh1ZNaGQM.png",
-    "category": "Irrigation",
-    "badge": null,
-    "bestSeller": false,
-    "headline": "Kheti ke liye leak-proof aur strong",
-    "description": "Yeh pipe kheti ke liye perfect hai. Leak-proof hai aur strong material se bana hai, jisse paani easily flow karta hai bina kisi problem ke. Barsat ho ya garmi, yeh har mausam mein reliable rehta hai.",
+    "slug": "calcimin-gold",
+    "name": "Calcimin Gold",
+    "category": "Dairy",
+    "headline": "Mineral Supplement for Better Growth",
+    "description": "Complete mineral mix jo animals ki growth aur fertility improve karta hai.",
     "price": {
-      "display": "₹149 se shuru",
-      "range": "₹149 – ₹499",
-      "note": "Length aur diameter ke hisaab se daam alag"
+      "display": "₹400 – ₹600",
+      "range": "1kg pack",
+      "note": "Bulk order available"
     },
+    "image": "/products/calcimin.png",
     "inStock": true,
-    "deliveryDays": "3-5 din",
+    "deliveryDays": "3-6 din",
     "cashOnDelivery": true,
     "features": [
-      "Leak-proof design",
-      "Flexible material",
-      "Long lasting quality",
-      "Strong PVC material",
-      "Weather resistant",
-      "Easy to install"
+      "Mineral deficiency prevent karta hai",
+      "Growth improve karta hai",
+      "Milk production badhata hai"
     ],
     "specifications": [
-      { "label": "Material", "value": "Heavy-duty PVC" },
-      { "label": "Length", "value": "Custom available" },
-      { "label": "Usage", "value": "Irrigation & water supply" },
-      { "label": "Durability", "value": "Very high" },
-      { "label": "Flexibility", "value": "Highly flexible" },
-      { "label": "Suitable for", "value": "Agricultural use" }
+      { "label": "Type", "value": "Mineral Mixture" },
+      { "label": "Suitable For", "value": "All Livestock" }
     ],
+    "composition": [
+      "Calcium",
+      "Phosphorus",
+      "Zinc",
+      "Iron",
+      "Copper"
+    ],
+    "usage": [
+      "Cow/Buffalo: 50-100 gm daily",
+      "Calf/Sheep: 25 gm daily"
+    ],
+    "directions": "Feed ke saath mix karein",
     "useCases": [
-      "Kheti mein paani lagane ke liye",
-      "Pokhren se paani nikalne ke liye",
-      "Ghar mein underground piping",
-      "Animal trough tak paani le jaane ke liye"
-    ],
-    "whatsappMessage": "Namaste! Mujhe Heavy Duty Water Pipe ke baare mein jaankari chahiye. Kripya price aur delivery details batayein."
+      "Low fertility",
+      "Weak growth",
+      "Milk issues"
+    ]
   },
+
   {
     "id": 6,
-    "slug": "portable-chulha-stand",
-    "name": "Portable Chulha Stand",
-    "shortDescription": "Long time chalega",
-    "image": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Product6-83FSMYUmU7klzTkWTjY77E6vl5wdhP.png",
-    "category": "Cooking",
-    "badge": null,
-    "bestSeller": false,
-    "headline": "Ghar mein ya bahar - cooking ko easy banao",
-    "description": "Yeh chulha stand cooking ko safe aur easy bana deta hai. Ghar ke andar ya bahar dono jagah use kar sakte hain. Strong aur stable design hai jo long time tak chalega. Portable hai jisse aasan tarike se le-dhulakar kahin bhi laga sakte ho.",
+    "slug": "uro-tonic",
+    "name": "Uro-Tonic",
+    "category": "Dairy",
+    "headline": "Uterine Health & Recovery Support",
+    "description": "Delivery ke baad uterus recovery aur reproductive health ke liye special tonic.",
     "price": {
-      "display": "₹349 se shuru",
-      "range": "₹349 – ₹699",
-      "note": "Size aur material ke hisaab se daam alag"
+      "display": "₹300 – ₹500",
+      "range": "1L pack",
+      "note": "Vet recommended"
     },
+    "image": "/products/uro-tonic.png",
     "inStock": true,
     "deliveryDays": "3-5 din",
     "cashOnDelivery": true,
     "features": [
-      "Stable structure",
-      "Heat resistant design",
-      "Easy to move around",
-      "Very durable",
-      "Lightweight construction",
-      "Safe for all fuel types"
+      "Placenta removal mein help",
+      "Uterus cleaning",
+      "Fertility improve karta hai"
     ],
     "specifications": [
-      { "label": "Material", "value": "Heavy-duty metal" },
-      { "label": "Usage", "value": "Cooking support stand" },
-      { "label": "Weight", "value": "Light & portable" },
-      { "label": "Heat Resistance", "value": "Very high" },
-      { "label": "Stability", "value": "Very stable" },
-      { "label": "Suitable for", "value": "Indoor & outdoor cooking" }
+      { "label": "Type", "value": "Uterine Tonic" }
     ],
+    "composition": [
+      "Ashok",
+      "Nagarmotha",
+      "Shatavari",
+      "Herbal extracts"
+    ],
+    "usage": [
+      "50-100 ml daily"
+    ],
+    "directions": "Direct ya feed ke saath",
     "useCases": [
-      "Roz ke khana banane ke liye",
-      "Bahar mein chulha rakhne ke liye",
-      "Wedding ya event mein use",
-      "Gaon mein communal cooking ke liye"
+      "Post delivery care",
+      "Retention of placenta",
+      "Uterine infection"
+    ]
+  },
+
+  {
+    "id": 7,
+    "slug": "calcivet-plus",
+    "name": "Calcivet Plus",
+    "category": "Dairy",
+    "headline": "Milk Yield & Health Booster",
+    "description": "Milk production badhane aur calcium deficiency door karne ke liye effective solution.",
+    "price": {
+      "display": "₹250 – ₹400",
+      "range": "Bottle size ke hisaab se",
+      "note": "Regular use recommended"
+    },
+    "image": "/products/calcivet.png",
+    "inStock": true,
+    "deliveryDays": "2-5 din",
+    "cashOnDelivery": true,
+    "features": [
+      "Milk production badhata hai",
+      "Calcium deficiency door karta hai",
+      "Immunity improve karta hai"
     ],
-    "whatsappMessage": "Namaste! Mujhe Portable Chulha Stand ke baare mein jaankari chahiye. Kripya price aur delivery details batayein."
+    "specifications": [
+      { "label": "Type", "value": "Liquid Supplement" }
+    ],
+    "composition": [
+      "Vitamin A",
+      "Vitamin D3",
+      "Calcium",
+      "Phosphorus",
+      "Vitamin B12"
+    ],
+    "usage": [
+      "Cattle: 100 ml daily",
+      "Small animals: 20-25 ml daily"
+    ],
+    "directions": "Feed ke saath mix karein",
+    "useCases": [
+      "Low milk yield",
+      "Weak animals",
+      "Calcium deficiency"
+    ]
+  },
+
+  {
+    "id": 8,
+    "slug": "ktox",
+    "name": "KTOX",
+    "category": "Healthcare",
+    "headline": "Emergency Detox Solution",
+    "description": "Poisoning, diarrhoea aur indigestion ke liye fast-action solution.",
+    "price": {
+      "display": "₹300 – ₹450",
+      "range": "Bottle size ke hisaab se",
+      "note": "Emergency use"
+    },
+    "image": "/products/ktox.png",
+    "inStock": true,
+    "deliveryDays": "2-4 din",
+    "cashOnDelivery": true,
+    "features": [
+      "Toxins absorb karta hai",
+      "Poisoning mein help",
+      "Digestion improve karta hai"
+    ],
+    "specifications": [
+      { "label": "Type", "value": "Detox Liquid" }
+    ],
+    "composition": [
+      "Activated Charcoal – 300 mg"
+    ],
+    "usage": [
+      "Cow: 2-3 ml/kg",
+      "Dog: 1 ml/kg"
+    ],
+    "directions": "Emergency mein turant use karein",
+    "useCases": [
+      "Poisoning",
+      "Diarrhoea",
+      "Indigestion"
+    ]
+  },
+
+  {
+    "id": 9,
+    "slug": "ktox-plus",
+    "name": "KTOX Plus",
+    "category": "Healthcare",
+    "headline": "Advanced Digestive & Detox Support",
+    "description": "Poisoning aur digestive issues ke liye advanced solution.",
+    "price": {
+      "display": "₹350 – ₹500",
+      "range": "Bottle size ke hisaab se",
+      "note": "Vet recommended"
+    },
+    "image": "/products/ktox-plus.png",
+    "inStock": true,
+    "deliveryDays": "2-4 din",
+    "cashOnDelivery": true,
+    "features": [
+      "Poisoning treatment",
+      "Bloat control",
+      "Digestive support"
+    ],
+    "specifications": [
+      { "label": "Type", "value": "Advanced Detox" }
+    ],
+    "composition": [
+      "Activated Charcoal",
+      "Osmotic laxative"
+    ],
+    "usage": [
+      "Cow: 2-3 ml/kg",
+      "Dog: 1 ml/kg"
+    ],
+    "directions": "Vet ke guidance ke saath use karein",
+    "useCases": [
+      "Poisoning",
+      "Bloat",
+      "Impaction"
+    ]
+  },
+
+  {
+    "id": 10,
+    "slug": "speed-sav",
+    "name": "Speed SAV",
+    "category": "Performance",
+    "headline": "Complete Health & Performance Booster",
+    "description": "Animals ke liye complete tonic jo immunity aur performance improve karta hai.",
+    "price": {
+      "display": "₹400 – ₹650",
+      "range": "Bottle size ke hisaab se",
+      "note": "Regular use recommended"
+    },
+    "image": "/products/speed-sav.png",
+    "inStock": true,
+    "deliveryDays": "3-6 din",
+    "cashOnDelivery": true,
+    "features": [
+      "Immunity strong karta hai",
+      "Muscle repair",
+      "Breeding performance improve karta hai"
+    ],
+    "specifications": [
+      { "label": "Type", "value": "Performance Tonic" }
+    ],
+    "composition": [
+      "Vitamin A",
+      "Vitamin D3",
+      "Vitamin E",
+      "Vitamin B Complex",
+      "Zinc",
+      "Selenium"
+    ],
+    "usage": [
+      "Cattle: 10 ml daily",
+      "Sheep/Goat: 5 ml daily"
+    ],
+    "directions": "Daily feed ke saath",
+    "useCases": [
+      "Weak animals",
+      "Low immunity",
+      "Breeding support"
+    ]
   }
 ]
