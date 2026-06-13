@@ -39,41 +39,6 @@
   --dot-color: #D8D8D2;
 }
 
-.dark {
-  --background: #1A1A18;
-  --foreground: #F5F5F0;
-  --card: #2D2D2A;
-  --card-foreground: #F5F5F0;
-  --popover: #2D2D2A;
-  --popover-foreground: #F5F5F0;
-  --primary: #FF9933;
-  --primary-foreground: #FFFFFF;
-  --secondary: #138808;
-  --secondary-foreground: #FFFFFF;
-  --muted: #3A3A38;
-  --muted-foreground: #BFBFBA;
-  --accent: #FF6B35;
-  --accent-foreground: #FFFFFF;
-  --destructive: #F87171;
-  --destructive-foreground: #1A1A18;
-  --border: #3A3A38;
-  --input: #2D2D2A;
-  --ring: #FF9933;
-  --accent-blue: #4D94FF;
-  --accent-teal: #00D9C4;
-  --accent-gold: #FFD700;
-  --accent-coral: #FF8787;
-  --sidebar: #1A1A18;
-  --sidebar-foreground: #F5F5F0;
-  --sidebar-primary: #FF9933;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #3A3A38;
-  --sidebar-accent-foreground: #F5F5F0;
-  --sidebar-border: #3A3A38;
-  --sidebar-ring: #FF9933;
-  --dot-color: #2A2A28;
-}
-
 @theme inline {
   --font-sans: var(--font-inter, 'Inter Fallback');
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
@@ -119,7 +84,8 @@
   }
 
   html {
-    background-color: var(--background);
+    color-scheme: light only;
+    background-color: #F7F6F3;
     background-image: radial-gradient(circle, var(--dot-color) 1px, transparent 1px);
     background-size: 22px 22px;
     background-attachment: fixed;

@@ -187,18 +187,18 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden"
+      className="relative overflow-hidden min-h-[100dvh] flex flex-col"
       style={{
         background: 'linear-gradient(to bottom, #ffeaaa 0%, #ffca55 35%, #f5a800 58%, #6db82e 72%, #3e7a12 100%)',
-        paddingTop: '64px',
-        paddingBottom: '0',
       }}
     >
       <HeroNavbar />
 
+      {/* Background layers — inset-0 so they fill the full hero height on all screen sizes */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
       {/* Left-side warm overlay */}
       <div
-        className="absolute top-0 left-0 bottom-0 pointer-events-none z-[1]"
+        className="absolute inset-y-0 left-0 z-[1]"
         style={{ width: '52%', background: 'linear-gradient(to right,rgba(120,60,0,0.38) 0%,rgba(120,60,0,0.22) 70%,rgba(120,60,0,0) 100%)' }}
       />
 
@@ -233,8 +233,7 @@ export function HeroSection() {
           MOBILE SVG  (viewBox 540 x 900)
       ════════════════════════════════════════════ */}
       <svg
-        className="md:hidden"
-        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none' }}
+        className="md:hidden absolute inset-0 w-full h-full"
         viewBox="0 0 540 900"
         preserveAspectRatio="xMidYMid slice"
         xmlns="http://www.w3.org/2000/svg"
@@ -397,8 +396,7 @@ export function HeroSection() {
           7 bird groups, each pre-started mid-cycle.
       ════════════════════════════════════════════ */}
       <svg
-        className="hidden md:block"
-        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none' }}
+        className="hidden md:block absolute inset-0 w-full h-full"
         viewBox="0 0 900 540"
         preserveAspectRatio="xMidYMid slice"
         xmlns="http://www.w3.org/2000/svg"
@@ -630,9 +628,10 @@ export function HeroSection() {
         </g>
         <path d="M0,12 Q225,48 450,20 Q675,48 900,12" fill="none" stroke="#e05e00" strokeWidth="2.5" opacity="0.2" strokeDasharray="7,6" />
       </svg>
+      </div>
 
       {/* ── Content ── */}
-      <div className="relative z-[2] max-w-6xl mx-auto px-4 sm:px-6 pt-14 pb-20">
+      <div className="relative z-[2] flex-1 flex flex-col justify-center w-full max-w-6xl mx-auto px-4 sm:px-6 pt-20 pb-12 md:pt-24 md:pb-16 lg:pb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center">
 
           {/* Left: Text */}

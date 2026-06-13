@@ -59,23 +59,12 @@ export default function ProductDetailPage() {
       <Navbar />
       <main className="min-h-screen">
 
-        {/* Breadcrumb */}
-        <div className="bg-white border-b">
-          <div className="max-w-6xl mx-auto px-4 py-3 flex gap-2 text-sm">
-            <Link href="/" className="text-muted-foreground">
-              Home
-            </Link>
-            <span>/</span>
-            <span className="font-medium">{product.name}</span>
-          </div>
-        </div>
-
         <div className="max-w-6xl mx-auto px-4 py-10">
 
           {/* Back */}
           <Link
-            href="/#products"
-            className="inline-flex items-center gap-1 text-sm mb-6"
+            href="/products"
+            className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors mb-6"
           >
             <ChevronLeft size={16} />
             Sabhi Products

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Poppins, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
@@ -43,8 +44,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable} ${inter.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`light ${poppins.variable} ${inter.variable}`} suppressHydrationWarning>
       <body className="font-sans antialiased" suppressHydrationWarning>
+        <Script id="force-light-theme" strategy="beforeInteractive">
+          {`document.documentElement.classList.remove('dark')`}
+        </Script>
         {children}
         <Analytics />
       </body>
