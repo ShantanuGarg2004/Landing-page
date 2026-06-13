@@ -6,12 +6,12 @@ import { ArrowRight } from 'lucide-react'
 import { type Product, getWhatsAppUrl } from '@/lib/products'
 
 const accentColors = [
-  'border-l-[var(--accent-blue)]',
-  'border-l-[var(--accent-teal)]',
-  'border-l-[var(--accent-gold)]',
-  'border-l-[var(--accent-coral)]',
   'border-l-primary',
-  'border-l-secondary',
+  'border-l-[var(--accent-red)]',
+  'border-l-primary',
+  'border-l-[var(--accent-red)]',
+  'border-l-primary',
+  'border-l-[var(--accent-red)]',
 ]
 
 interface ProductCardProps {
@@ -82,8 +82,8 @@ export function ProductCard({ product, index }: ProductCardProps) {
         <div className="flex items-center justify-between pt-3 border-t border-border">
           <div className="flex items-center gap-1.5">
             {product.inStock ? (
-              <span className="flex items-center gap-1 text-[10px] text-secondary font-semibold">
-                <span className="w-1.5 h-1.5 rounded-full bg-secondary inline-block" />
+              <span className="flex items-center gap-1 text-[10px] text-foreground font-semibold">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-600 inline-block" />
                 Stock mein hai
               </span>
             ) : (

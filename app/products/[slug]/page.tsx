@@ -95,7 +95,7 @@ export default function ProductDetailPage() {
 
               <h1 className="text-2xl font-bold">{product.name}</h1>
 
-              <p className="text-secondary font-semibold">
+              <p className="text-foreground font-semibold">
                 {product.headline}
               </p>
 
@@ -116,16 +116,16 @@ export default function ProductDetailPage() {
               {/* Tags */}
               <div className="flex gap-2 flex-wrap">
                 {product.inStock && (
-                  <span className="text-xs bg-green-100 px-2 py-1 rounded">
+                  <span className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded">
                     In Stock
                   </span>
                 )}
-                <span className="text-xs bg-gray-100 px-2 py-1 rounded flex items-center gap-1">
+                <span className="text-xs bg-muted text-foreground px-2 py-1 rounded flex items-center gap-1">
                   <Truck size={12} />
                   {product.deliveryDays}
                 </span>
                 {product.cashOnDelivery && (
-                  <span className="text-xs bg-gray-100 px-2 py-1 rounded flex items-center gap-1">
+                  <span className="text-xs bg-red-50 text-primary px-2 py-1 rounded flex items-center gap-1">
                     <Banknote size={12} />
                     COD
                   </span>
@@ -144,7 +144,7 @@ export default function ProductDetailPage() {
                 <a
                   href={waUrl}
                   target="_blank"
-                  className="flex-1 bg-secondary text-white py-3 rounded-lg text-center"
+                  className="flex-1 bg-[#25D366] text-white py-3 rounded-lg text-center"
                 >
                   <MessageCircle size={16} className="inline mr-1" />
                   WhatsApp
@@ -159,7 +159,7 @@ export default function ProductDetailPage() {
             <div className="grid sm:grid-cols-2 gap-3">
               {product.features.map((f, i) => (
                 <div key={i} className="flex gap-2 text-sm">
-                  <CheckCircle2 size={16} className="text-green-500" />
+                  <CheckCircle2 size={16} className="text-primary shrink-0" />
                   {f}
                 </div>
               ))}
@@ -191,7 +191,7 @@ export default function ProductDetailPage() {
                 {product.composition.map((c, i) => (
                   <div
                     key={i}
-                    className="bg-gray-50 p-3 rounded text-sm"
+                    className="bg-muted text-foreground p-3 rounded text-sm"
                   >
                     {c}
                   </div>

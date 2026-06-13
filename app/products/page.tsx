@@ -143,7 +143,7 @@ export default function ProductsPage() {
                 href="https://wa.me/918755333994"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs font-semibold text-white bg-secondary hover:bg-secondary/90 px-4 py-2 rounded-lg transition-colors"
+                className="text-xs font-semibold text-white bg-[#25D366] hover:bg-[#20BD5A] px-4 py-2 rounded-lg transition-colors"
               >
                 WhatsApp
               </a>

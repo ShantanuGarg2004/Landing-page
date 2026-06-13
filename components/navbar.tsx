@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Menu, X, Phone, Download } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 
@@ -22,14 +22,32 @@ export function Navbar() {
   const router = useRouter()
   const isHome = pathname === '/'
 
+  useEffect(() => {
+    if (!isHome || !window.location.hash) return
+
+    const sectionId = window.location.hash.replace('#', '')
+    const el = document.getElementById(sectionId)
+    if (el) {
+      requestAnimationFrame(() => {
+        el.scrollIntoView({ behavior: 'smooth' })
+      })
+    }
+  }, [isHome, pathname])
+
+  function scrollToSection(section: string) {
+    const el = document.getElementById(section)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+      setIsOpen(false)
+      return true
+    }
+    return false
+  }
+
   function handleNavClick(e: React.MouseEvent<HTMLAnchorElement>, section: string) {
     if (isHome) {
       e.preventDefault()
-      const el = document.getElementById(section)
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' })
-        setIsOpen(false)
-      }
+      scrollToSection(section)
     } else {
       setIsOpen(false)
     }
@@ -37,10 +55,10 @@ export function Navbar() {
 
   function handleOrderClick() {
     if (isHome) {
-      const el = document.getElementById('contact')
-      if (el) el.scrollIntoView({ behavior: 'smooth' })
+      scrollToSection('contact')
     } else {
       router.push('/#contact')
+      setIsOpen(false)
     }
   }
 
@@ -84,7 +102,7 @@ export function Navbar() {
             <a
               href={BROCHURE_HREF}
               download={BROCHURE_FILENAME}
-              className="flex items-center gap-2 border border-border hover:border-primary/50 text-foreground hover:text-primary px-4 py-2 rounded-lg font-semibold text-sm transition-colors duration-150"
+              className="flex items-center gap-2 border border-border hover:border-foreground/30 text-foreground hover:bg-muted px-4 py-2 rounded-lg font-semibold text-sm transition-colors duration-150"
             >
               <Download size={15} />
               Download Brochure
@@ -132,7 +150,7 @@ export function Navbar() {
                 href={BROCHURE_HREF}
                 download={BROCHURE_FILENAME}
                 onClick={() => setIsOpen(false)}
-                className="w-full flex items-center justify-center gap-2 border border-border hover:border-primary/50 text-foreground hover:text-primary py-2.5 rounded-lg font-semibold text-sm transition-colors"
+                className="w-full flex items-center justify-center gap-2 border border-border hover:border-foreground/30 text-foreground hover:bg-muted py-2.5 rounded-lg font-semibold text-sm transition-colors"
               >
                 <Download size={15} />
                 Download Brochure

@@ -4,39 +4,40 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #F7F6F3;
-  --foreground: #333333;
+  --background: #FAFAF8;
+  --foreground: #1a1a1a;
   --card: #FFFFFF;
-  --card-foreground: #333333;
+  --card-foreground: #1a1a1a;
   --popover: #FFFFFF;
-  --popover-foreground: #333333;
-  --primary: #FF9933;
+  --popover-foreground: #1a1a1a;
+  --primary: #DC2626;
   --primary-foreground: #FFFFFF;
-  --secondary: #138808;
+  --secondary: #2563EB;
   --secondary-foreground: #FFFFFF;
   --muted: #E8E8E4;
-  --muted-foreground: #666666;
-  --accent: #FF6B35;
+  --muted-foreground: #6B7280;
+  --accent: #EF4444;
   --accent-foreground: #FFFFFF;
-  --destructive: #DC2626;
+  --destructive: #B91C1C;
   --destructive-foreground: #FFFFFF;
   --border: #E2E2DC;
   --input: #FFFFFF;
-  --ring: #FF9933;
-  --accent-blue: #0066CC;
-  --accent-teal: #00A896;
-  --accent-gold: #FFB800;
-  --accent-coral: #FF6B6B;
+  --ring: #DC2626;
+  --accent-blue: #2563EB;
+  --accent-red: #DC2626;
+  --accent-teal: #3B82F6;
+  --accent-gold: #F87171;
+  --accent-coral: #EF4444;
   --radius: 0.625rem;
   --sidebar: #F5F5F0;
-  --sidebar-foreground: #333333;
-  --sidebar-primary: #FF9933;
+  --sidebar-foreground: #1a1a1a;
+  --sidebar-primary: #DC2626;
   --sidebar-primary-foreground: #FFFFFF;
   --sidebar-accent: #E8E8E4;
-  --sidebar-accent-foreground: #333333;
+  --sidebar-accent-foreground: #1a1a1a;
   --sidebar-border: #E2E2DC;
-  --sidebar-ring: #FF9933;
-  --dot-color: #D8D8D2;
+  --sidebar-ring: #DC2626;
+  --dot-color: #ECECEA;
 }
 
 @theme inline {
@@ -85,7 +86,7 @@
 
   html {
     color-scheme: light only;
-    background-color: #F7F6F3;
+    background-color: var(--background);
     background-image: radial-gradient(circle, var(--dot-color) 1px, transparent 1px);
     background-size: 22px 22px;
     background-attachment: fixed;
@@ -99,11 +100,11 @@
 
 @layer utilities {
   .gradient-text {
-    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+    @apply text-secondary;
   }
 
   .gradient-text-warm {
-    @apply bg-gradient-to-r from-primary to-orange-600 bg-clip-text text-transparent;
+    @apply text-secondary;
   }
 
   /* Sections that need a solid white surface above the dot bg */
@@ -117,17 +118,17 @@
   }
 
   .card-accent-teal {
-    @apply bg-white border-l-4 border-[var(--accent-teal)] shadow-sm hover:shadow-md transition-shadow;
+    @apply bg-white border-l-4 border-secondary shadow-sm hover:shadow-md transition-shadow;
     border-radius: 0 var(--radius) var(--radius) 0;
   }
 
   .card-accent-gold {
-    @apply bg-white border-l-4 border-[var(--accent-gold)] shadow-sm hover:shadow-md transition-shadow;
+    @apply bg-white border-l-4 border-primary shadow-sm hover:shadow-md transition-shadow;
     border-radius: 0 var(--radius) var(--radius) 0;
   }
 
   .card-accent-coral {
-    @apply bg-white border-l-4 border-[var(--accent-coral)] shadow-sm hover:shadow-md transition-shadow;
+    @apply bg-white border-l-4 border-[var(--accent-red)] shadow-sm hover:shadow-md transition-shadow;
     border-radius: 0 var(--radius) var(--radius) 0;
   }
 
@@ -136,14 +137,14 @@
   }
 
   .badge-teal {
-    @apply inline-block bg-[var(--accent-teal)]/10 text-[var(--accent-teal)] px-3 py-1 rounded-full text-sm font-semibold;
+    @apply inline-block bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-semibold;
   }
 
   .badge-gold {
-    @apply inline-block bg-[var(--accent-gold)]/10 text-[var(--accent-gold)] px-3 py-1 rounded-full text-sm font-semibold;
+    @apply inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold;
   }
 
   .badge-coral {
-    @apply inline-block bg-[var(--accent-coral)]/10 text-[var(--accent-coral)] px-3 py-1 rounded-full text-sm font-semibold;
+    @apply inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold;
   }
 }

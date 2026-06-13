@@ -1,3 +1,4 @@
+import { Navbar } from '@/components/navbar'
 import { HeroSection } from '@/components/hero-section'
 import { ProductsSection } from '@/components/products-section'
 import { WhyUsSection } from '@/components/why-us-section'
@@ -13,14 +14,17 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main>
-      <HeroSection />
-      <ProductsSection />
-      <WhyUsSection />
-      <HowToOrderSection />
-      <AboutSection />
-      <CTASection />
-      <Footer />
-    </main>
+    <>
+      <Navbar />
+      <main>
+        <HeroSection />
+        <ProductsSection />
+        <WhyUsSection />
+        <HowToOrderSection />
+        <AboutSection />
+        <CTASection />
+        <Footer />
+      </main>
+    </>
   )
 }

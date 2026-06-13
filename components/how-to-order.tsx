@@ -18,32 +18,32 @@ const steps = [
   {
     number: '02',
     icon: Phone,
-    iconBg: 'bg-secondary/10',
-    iconColor: 'text-secondary',
+    iconBg: 'bg-primary/10',
+    iconColor: 'text-primary',
     title: 'Call ya WhatsApp Karein',
     description: 'Direct humse connect karein – call karein ya WhatsApp par message karein. Hum aapko product details, dosage aur pricing ki poori jaankari denge.',
     tip: 'Direct support – no middleman',
-    tipColor: 'bg-secondary/10 text-secondary',
+    tipColor: 'bg-primary/10 text-primary',
   },
   {
     number: '03',
     icon: MessageCircle,
-    iconBg: 'bg-[var(--accent-blue)]/10',
-    iconColor: 'text-[var(--accent-blue)]',
+    iconBg: 'bg-muted',
+    iconColor: 'text-foreground',
     title: 'Order Confirm Karein',
     description: 'Hum aapko complete information aur price batayenge. Order confirm hone ke baad aapka product immediately dispatch ho jaata hai.',
     tip: 'No online payment required',
-    tipColor: 'bg-[var(--accent-blue)]/10 text-[var(--accent-blue)]',
+    tipColor: 'bg-muted text-foreground',
   },
   {
     number: '04',
     icon: Package,
-    iconBg: 'bg-[var(--accent-teal)]/10',
-    iconColor: 'text-[var(--accent-teal)]',
+    iconBg: 'bg-[var(--accent-red)]/10',
+    iconColor: 'text-[var(--accent-red)]',
     title: 'Delivery Paayein',
     description: 'Fast delivery directly aapke paas. Hum ensure karte hain ki aapka product safe aur timely pahunche – bina kisi tension ke.',
     tip: 'Fast & safe delivery guaranteed',
-    tipColor: 'bg-[var(--accent-teal)]/10 text-[var(--accent-teal)]',
+    tipColor: 'bg-[var(--accent-red)]/10 text-[var(--accent-red)]',
   },
 ]
 
@@ -136,7 +136,7 @@ export function HowToOrderSection() {
         >
           <div>
             <p className="text-white font-semibold text-sm">Ready to order? Connect with us now</p>
-            <p className="text-white/50 text-xs mt-0.5">Monday – Saturday, 10 AM – 6 PM</p>
+            <p className="text-gray-400 text-xs mt-0.5">Monday – Saturday, 10 AM – 6 PM</p>
           </div>
           <div className="flex gap-3 shrink-0">
             <a
@@ -150,7 +150,7 @@ export function HowToOrderSection() {
               href="https://wa.me/918755333994?text=Namaste!%20Mujhe%20SAV%20Life%20Sciences%20products%20ke%20baare%20mein%20jaankari%20chahiye."
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-colors"
+              className="flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-colors"
             >
               <MessageCircle size={14} />
               WhatsApp
