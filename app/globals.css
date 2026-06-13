@@ -99,12 +99,13 @@
 }
 
 @layer utilities {
-  .gradient-text {
-    @apply text-secondary;
-  }
-
+  .gradient-text,
   .gradient-text-warm {
-    @apply text-secondary;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
   }
 
   /* Sections that need a solid white surface above the dot bg */

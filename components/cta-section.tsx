@@ -21,7 +21,7 @@ export function CTASection() {
                 <p className="text-primary text-sm font-semibold uppercase tracking-wide mb-3">Contact Us</p>
                 <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-snug">
                   Apne animals ki health aur productivity ko improve karein –{' '}
-                  <span className="text-secondary">aaj hi start karein</span>
+                  <span className="gradient-text">aaj hi start karein</span>
                 </h2>
                 <p className="text-gray-300 text-sm leading-relaxed mb-6">
                   Call karein ya WhatsApp karein aur sahi product choose karein. Hum directly
