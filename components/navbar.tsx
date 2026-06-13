@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Menu, X, Phone } from 'lucide-react'
+import { Menu, X, Phone, Download } from 'lucide-react'
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
@@ -12,6 +12,9 @@ const navItems = [
   { label: 'About', href: '/#about', section: 'about' },
   { label: 'Contact', href: '/#contact', section: 'contact' },
 ]
+
+const BROCHURE_HREF = '/products/SAV.pdf'
+const BROCHURE_FILENAME = 'SAV-Life-Sciences-Brochure.pdf'
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -76,14 +79,24 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* Desktop CTA */}
-          <button
-            onClick={handleOrderClick}
-            className="hidden md:flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg font-semibold text-sm transition-colors duration-150"
-          >
-            <Phone size={15} />
-            Order Karein
-          </button>
+          {/* Desktop CTAs */}
+          <div className="hidden md:flex items-center gap-2">
+            <a
+              href={BROCHURE_HREF}
+              download={BROCHURE_FILENAME}
+              className="flex items-center gap-2 border border-border hover:border-primary/50 text-foreground hover:text-primary px-4 py-2 rounded-lg font-semibold text-sm transition-colors duration-150"
+            >
+              <Download size={15} />
+              Download Brochure
+            </a>
+            <button
+              onClick={handleOrderClick}
+              className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg font-semibold text-sm transition-colors duration-150"
+            >
+              <Phone size={15} />
+              Order Karein
+            </button>
+          </div>
 
           {/* Mobile toggle */}
           <button
@@ -114,7 +127,16 @@ export function Navbar() {
                 {item.label}
               </a>
             ))}
-            <div className="pt-2">
+            <div className="pt-2 space-y-2">
+              <a
+                href={BROCHURE_HREF}
+                download={BROCHURE_FILENAME}
+                onClick={() => setIsOpen(false)}
+                className="w-full flex items-center justify-center gap-2 border border-border hover:border-primary/50 text-foreground hover:text-primary py-2.5 rounded-lg font-semibold text-sm transition-colors"
+              >
+                <Download size={15} />
+                Download Brochure
+              </a>
               <button
                 onClick={handleOrderClick}
                 className="w-full flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white py-2.5 rounded-lg font-semibold text-sm transition-colors"

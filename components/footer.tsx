@@ -31,11 +31,11 @@ export function Footer() {
             </p>
             {/* Contact quick links */}
             <div className="space-y-2">
-              <a href="tel:+917452897444" className="flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors">
+              <a href="tel:+918755333994" className="flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors">
                 <Phone size={14} />
-                +91 74528 97444
+                +91 87553 33994
               </a>
-              <a href="https://wa.me/917452897444" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors">
+              <a href="https://wa.me/918755333994" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors">
                 <MessageCircle size={14} />
                 WhatsApp Karein
               </a>
@@ -70,7 +70,7 @@ export function Footer() {
             <ul className="space-y-2.5">
               <li className="flex items-start gap-2 text-sm text-white/60">
                 <Phone size={14} className="mt-0.5 shrink-0" />
-                +91 74528 97444
+                +91 87553 33994
               </li>
               <li className="flex items-start gap-2 text-sm text-white/60">
                 <MessageCircle size={14} className="mt-0.5 shrink-0" />

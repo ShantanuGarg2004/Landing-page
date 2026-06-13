@@ -140,14 +140,14 @@ export function HowToOrderSection() {
           </div>
           <div className="flex gap-3 shrink-0">
             <a
-              href="tel:+917452897444"
+              href="tel:+918755333994"
               className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-colors"
             >
               <Phone size={14} />
               Call Now
             </a>
             <a
-              href="https://wa.me/917452897444?text=Namaste!%20Mujhe%20SAV%20Life%20Sciences%20products%20ke%20baare%20mein%20jaankari%20chahiye."
+              href="https://wa.me/918755333994?text=Namaste!%20Mujhe%20SAV%20Life%20Sciences%20products%20ke%20baare%20mein%20jaankari%20chahiye."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-colors"

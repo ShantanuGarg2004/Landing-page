@@ -135,7 +135,7 @@ export default function ProductDetailPage() {
               {/* CTA */}
               <div className="flex gap-3 pt-4">
                 <a
-                  href="tel:+917452897444"
+                  href="tel:+918755333994"
                   className="flex-1 bg-primary text-white py-3 rounded-lg text-center"
                 >
                   <Phone size={16} className="inline mr-1" />

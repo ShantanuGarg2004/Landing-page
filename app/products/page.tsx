@@ -134,13 +134,13 @@ export default function ProductsPage() {
             </p>
             <div className="flex gap-3 shrink-0">
               <a
-                href="tel:+917452897444"
+                href="tel:+918755333994"
                 className="text-xs font-semibold text-white bg-primary hover:bg-primary/90 px-4 py-2 rounded-lg transition-colors"
               >
                 Call Now
               </a>
               <a
-                href="https://wa.me/917452897444"
+                href="https://wa.me/918755333994"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs font-semibold text-white bg-secondary hover:bg-secondary/90 px-4 py-2 rounded-lg transition-colors"

@@ -48,12 +48,12 @@ export function CTASection() {
                 {/* Phone number display */}
                 <div className="bg-white/10 rounded-xl px-5 py-4 text-center">
                   <p className="text-white/50 text-xs mb-1">Our Number</p>
-                  <p className="text-white text-2xl font-bold tracking-wide">+91 74528 97444</p>
+                  <p className="text-white text-2xl font-bold tracking-wide">+91 87553 33994</p>
                 </div>
 
                 {/* Call button */}
                 <a
-                  href="tel:+917452897444"
+                  href="tel:+918755333994"
                   className="flex items-center justify-center gap-3 w-full bg-primary hover:bg-primary/90 text-white px-6 py-3.5 rounded-xl font-semibold text-sm transition-colors duration-150"
                 >
                   <Phone size={18} />
@@ -62,7 +62,7 @@ export function CTASection() {
 
                 {/* WhatsApp button */}
                 <a
-                  href="https://wa.me/917452897444?text=Namaste!%20Mujhe%20SAV%20Life%20Sciences%20products%20ke%20baare%20mein%20jaankari%20chahiye."
+                  href="https://wa.me/918755333994?text=Namaste!%20Mujhe%20SAV%20Life%20Sciences%20products%20ke%20baare%20mein%20jaankari%20chahiye."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 w-full bg-secondary hover:bg-secondary/90 text-white px-6 py-3.5 rounded-xl font-semibold text-sm transition-colors duration-150"

@@ -49,7 +49,7 @@ export function getBestSellers(): Product[] {
 
 // ✅ WhatsApp URL
 export function getWhatsAppUrl(product: Product): string {
-  const phone = '917452897444'
+  const phone = '918755333994'
 
   const message = `Namaste 🙏
 

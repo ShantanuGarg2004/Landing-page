@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Menu, X, Phone } from 'lucide-react'
+import { Menu, X, Phone, Download } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -13,6 +13,9 @@ const navItems = [
   { label: 'About',    href: '/#about',    section: 'about'    },
   { label: 'Contact',  href: '/#contact',  section: 'contact'  },
 ]
+
+const BROCHURE_HREF = '/products/SAV.pdf'
+const BROCHURE_FILENAME = 'SAV-Life-Sciences-Brochure.pdf'
 
 /* ─── Hero Navbar ───────────────────────────────────────────── */
 function HeroNavbar() {
@@ -91,15 +94,26 @@ function HeroNavbar() {
             ))}
           </div>
 
-          {/* Desktop CTA */}
-          <button
-            onClick={handleOrderClick}
-            className="hidden md:flex items-center gap-2 px-5 py-2 rounded-lg font-semibold text-sm text-white transition-opacity duration-150 hover:opacity-90"
-            style={{ background: '#e05e00', boxShadow: '0 2px 0 #a84000' }}
-          >
-            <Phone size={15} />
-            Order Karein
-          </button>
+          {/* Desktop CTAs */}
+          <div className="hidden md:flex items-center gap-2">
+            <a
+              href={BROCHURE_HREF}
+              download={BROCHURE_FILENAME}
+              className="flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-sm text-white transition-opacity duration-150 hover:opacity-90"
+              style={{ background: '#138808', boxShadow: '0 2px 0 #0d5a06' }}
+            >
+              <Download size={15} />
+              Download Brochure
+            </a>
+            <button
+              onClick={handleOrderClick}
+              className="flex items-center gap-2 px-5 py-2 rounded-lg font-semibold text-sm text-white transition-opacity duration-150 hover:opacity-90"
+              style={{ background: '#e05e00', boxShadow: '0 2px 0 #a84000' }}
+            >
+              <Phone size={15} />
+              Order Karein
+            </button>
+          </div>
 
           {/* Mobile toggle */}
           <button
@@ -132,7 +146,17 @@ function HeroNavbar() {
                 {item.label}
               </a>
             ))}
-            <div className="pt-2 px-1">
+            <div className="pt-2 px-1 space-y-2">
+              <a
+                href={BROCHURE_HREF}
+                download={BROCHURE_FILENAME}
+                onClick={() => setIsOpen(false)}
+                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg font-semibold text-sm text-white"
+                style={{ background: '#138808', boxShadow: '0 2px 0 #0d5a06' }}
+              >
+                <Download size={15} />
+                Download Brochure
+              </a>
               <button
                 onClick={handleOrderClick}
                 className="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg font-semibold text-sm text-white"
